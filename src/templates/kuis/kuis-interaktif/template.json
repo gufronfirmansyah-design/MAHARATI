@@ -1,0 +1,127 @@
+{
+  "id": "kuis-interaktif",
+  "title": "Generator Kuis Pembelajaran",
+  "version": 1,
+  "category": "kuis",
+  "group": "Asesmen Interaktif",
+  "order": 25,
+  "description": "Soal, kunci, pembahasan, dan pengalaman kuis sesuai tujuan belajar.",
+  "source": "Rancangan MAHARATI berdasarkan arahan dan referensi pengguna, 3 Oktober 2026",
+  "needs": [
+    "Materi atau sumber yang relevan tersedia di percakapan AI tujuan."
+  ],
+  "note": "",
+  "fields": [
+    {
+      "id": "mapel",
+      "label": "Mata pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "kelas",
+      "label": "Kelas / jenjang",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "materi",
+      "label": "Topik dan lingkup materi",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "tp",
+      "label": "Tujuan pembelajaran",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "bentuk",
+      "label": "Bentuk soal",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Pilihan ganda 4 opsi",
+        "Benar-salah disertai alasan",
+        "Menjodohkan",
+        "Mengurutkan",
+        "Jawaban singkat dengan rubrik"
+      ]
+    },
+    {
+      "id": "jumlah",
+      "label": "Jumlah soal",
+      "type": "number",
+      "required": true,
+      "shared": false,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": "level",
+      "label": "Tuntutan berpikir",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Pemahaman dasar",
+        "Penerapan kontekstual",
+        "Analisis dan evaluasi",
+        "Campuran sesuai TP"
+      ]
+    },
+    {
+      "id": "modeKuis",
+      "label": "Mode penggunaan",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Mandiri dengan umpan balik",
+        "Kuis kelas dipandu guru",
+        "Tim bergantian"
+      ]
+    },
+    {
+      "id": "keluaran",
+      "label": "Hasil yang diminta",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Paket soal + kunci + pembahasan",
+        "Aplikasi kuis browser lengkap"
+      ]
+    },
+    {
+      "id": "waktu",
+      "label": "Waktu per soal",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": ["Tanpa batas waktu", "30 detik", "60 detik", "90 detik"]
+    }
+  ],
+  "format": "authored",
+  "original": "",
+  "rules": [],
+  "body": "KONTEKS\nMata pelajaran: {{mapel}}\nKelas/jenjang: {{kelas}}\nMateri: {{materi}}\nTP: {{tp}}\nBuat {{keluaran}} dengan tepat {{jumlah}} soal utama, bentuk {{bentuk}}, tuntutan {{level}}, mode {{modeKuis}}, waktu {{waktu}}.\nKEAKURATAN DAN KELENGKAPAN\nUtamakan tujuan pembelajaran dan sumber yang dilampirkan. Bila sumber belum terbaca, minta sumber sebelum menyusun materi final; jangan mengarang kutipan, halaman, atau data faktual. Bedakan contoh rekaan dari fakta. Sertakan kunci/rubrik dan pembahasan yang konsisten. Jangan menyatakan jawaban terbuka benar hanya karena terisi atau banyak katanya. Sediakan tinjauan guru bila penilaian otomatis tidak memadai.\nAwali dengan kisi-kisi ringkas: nomor, TP, indikator, bentuk, tingkat kognitif dan alasannya. Distribusikan soal proporsional terhadap TP, gunakan stimulus bila membantu. Pengecoh harus masuk akal dan mewakili miskonsepsi. Hindari kunci berpola dan soal HOTS semu yang hanya panjang. Sediakan skor perbutir, jawaban/kunci atau rubrik, alasan, dan tindak lanjut belajar.\nDalam mode mandiri, berikan petunjuk setelah salah dan kesempatan mencoba sebelum pembahasan. Dalam mode kelas, guru mengendalikan pembukaan kunci. Tampilkan nomor soal, progres, petunjuk, serta hasil per TP; jangan membuka jawaban semua soal di layar peserta.\nJika hanya paket soal diminta, jangan membuat aplikasi. Jika aplikasi diminta: IMPLEMENTASI APLIKASI\nHasilkan kode lengkap yang benar-benar dapat dijalankan, bukan tombol demonstrasi atau TODO. Pisahkan data materi/soal, mesin permainan, dan tampilan agar mudah diubah. Gunakan teks Indonesia yang jelas, kontras terbaca, fokus keyboard, dan tombol sentuh besar. Sediakan mulai, jeda, ulangi, petunjuk, pengaturan suara, dan hasil. Audio hanya dimulai setelah interaksi pengguna. Tangani kondisi kosong, jaringan putus, dan penyimpanan browser ditolak dengan fallback yang jujur.\nJangan menanamkan password, token admin, atau service-role key di HTML/JavaScript. Pengunci lokal bukan keamanan akun. Jika diminta database, berikan skema dan aturan akses di server; jika layanan belum dikonfigurasi, tampilkan status lokal, bukan hasil sinkronisasi palsu. Gunakan identitas minimum dan jangan meminta data pribadi murid yang tidak diperlukan.\nUji aturan skor, jawaban, reset, pergantian pemain, resize, sentuh, dan keyboard. Nyatakan pengujian yang benar-benar dilakukan dan keterbatasan lingkungan. Tidak perlu memakai logo, musik, atau aset acara TV berlisensi.",
+  "example": {
+    "mapel": "IPAS",
+    "kelas": "V SD",
+    "materi": "Rantai makanan di ekosistem sawah",
+    "tp": "Murid menjelaskan hubungan antarmakhluk hidup dan memprediksi dampak perubahan populasi.",
+    "bentuk": "Pilihan ganda 4 opsi",
+    "jumlah": "10",
+    "level": "Penerapan kontekstual",
+    "modeKuis": "Mandiri dengan umpan balik",
+    "keluaran": "Aplikasi kuis browser lengkap",
+    "waktu": "Tanpa batas waktu"
+  }
+}

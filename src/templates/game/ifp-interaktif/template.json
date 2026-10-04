@@ -1,0 +1,157 @@
+{
+  "id": "ifp-interaktif",
+  "title": "Media IFP — 25 Pilihan",
+  "version": 1,
+  "category": "game",
+  "group": "Game & Aktivitas",
+  "order": 26,
+  "description": "Aktivitas untuk layar sentuh kelas: kuis, permainan, alat bantu, dan eksplorasi.",
+  "source": "Rancangan MAHARATI berdasarkan arahan dan referensi pengguna, 3 Oktober 2026",
+  "needs": [
+    "Materi atau sumber yang relevan tersedia di percakapan AI tujuan."
+  ],
+  "note": "",
+  "fields": [
+    {
+      "id": "mapel",
+      "label": "Mata pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "kelas",
+      "label": "Kelas / jenjang",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "materi",
+      "label": "Topik dan lingkup materi",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "tp",
+      "label": "Tujuan pembelajaran",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "jenis",
+      "label": "Jenis media IFP",
+      "type": "select",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Kuis Sentuh Interaktif",
+        "Kuis Berkelompok (Battle Kelas)",
+        "Adu Cepat / Buzzer Reaksi",
+        "Papan Skor / Leaderboard Kompetisi",
+        "Tarik Tambang Digital (Battle 2 Tim)",
+        "Balap Karung Digital",
+        "Panjat Pinang Digital",
+        "Drag & Drop Sentuh",
+        "Pencocokan Kartu Sentuh (Memory Game)",
+        "Teka-teki Kata Sentuh (Word Search)",
+        "Roda Undian / Pemilih Acak Siswa",
+        "Pembagi Kelompok Acak",
+        "Timer & Pengatur Waktu Kelas",
+        "Papan Tulis Digital",
+        "Papan Anotasi Kolaboratif",
+        "Polling / Voting Langsung (Grafik Real-Time)",
+        "Papan Word Cloud",
+        "Papan KWL / Diskusi Terstruktur",
+        "Peta Konsep Sentuh",
+        "Peta/Diagram Sentuh",
+        "Galeri/Museum Virtual Sentuh",
+        "Grafik/Bagan Data Interaktif",
+        "Video Interaktif (Jeda + Kuis)",
+        "Simulasi Sentuh",
+        "Presentasi Layar Penuh Sentuh"
+      ],
+      "instructionsBy": {
+        "Kuis Sentuh Interaktif": "Pilihan jawaban berupa tombol besar; satu respons sah per soal, lalu pembahasan yang dikendalikan guru.",
+        "Kuis Berkelompok (Battle Kelas)": "Kelompok memiliki giliran, papan skor, serta kesempatan setara. Skor mengikuti ketepatan, bukan hanya kecepatan.",
+        "Adu Cepat / Buzzer Reaksi": "Catat hanya buzzer pertama setelah guru membuka soal, kunci buzzer lain, sediakan reset dan giliran bila jawaban salah.",
+        "Papan Skor / Leaderboard Kompetisi": "Guru dapat tambah/kurangi poin dengan riwayat koreksi, tie-break dan reset berkonfirmasi; jangan menyebut peringkat contoh sebagai data nyata.",
+        "Tarik Tambang Digital (Battle 2 Tim)": "Dua zona sentuh terpisah. Jawaban benar memindahkan tali, bukan spam sentuhan. Sediakan batas kemenangan dan seri.",
+        "Balap Karung Digital": "Avatar maju melalui jawaban/tugas yang benar; animasi tidak boleh menutupi soal. Tangani finis bersamaan.",
+        "Panjat Pinang Digital": "Tahap panjatan mengikuti tantangan bertingkat, dengan checkpoint. Hindari penalti yang mempermalukan peserta.",
+        "Drag & Drop Sentuh": "Pointer capture per objek; pointerId terpisah. Drop target jelas, validasi kecocokan, alternatif pilih objek lalu target.",
+        "Pencocokan Kartu Sentuh (Memory Game)": "Balik maksimal dua kartu per pasangan; kunci klik selama evaluasi; pasangan berisi konsep yang relevan.",
+        "Teka-teki Kata Sentuh (Word Search)": "Tarik jalur huruf dengan pointer; simpan grid dan posisi solusi, dukung arah yang dijelaskan dan alternatif klik awal–akhir.",
+        "Roda Undian / Pemilih Acak Siswa": "Daftar dapat diedit; pilihan tanpa pengulangan opsional; gunakan nama panggilan. Animasi mengikuti hasil undian yang sudah ditentukan secara acak.",
+        "Pembagi Kelompok Acak": "Bagi daftar nama panggilan tanpa duplikasi/kehilangan peserta; ukuran kelompok berbeda maksimal satu, sediakan ulangi dan ekspor.",
+        "Timer & Pengatur Waktu Kelas": "Timer berdasarkan selisih waktu aktual, bukan hitungan interval; jeda, lanjut, tambah waktu, dan indikator tanpa suara tersedia.",
+        "Papan Tulis Digital": "Goresan terpisah per pointerId, pena/penghapus, undo, clear berkonfirmasi dan ekspor; sentuhan bersamaan jangan tersambung menjadi satu garis.",
+        "Papan Anotasi Kolaboratif": "Latar materi/gambar di bawah lapisan anotasi; multi-pointer lokal. Kolaborasi antarperangkat hanya bila ada backend nyata.",
+        "Polling / Voting Langsung (Grafik Real-Time)": "Untuk satu layar gunakan giliran dan kontrol guru; untuk lintasperangkat butuh sesi backend dan pencegahan suara ganda. Jangan berpura-pura tersinkron.",
+        "Papan Word Cloud": "Terima kata, normalisasi variasi kapital, hitung frekuensi dan batasi kata kasar melalui moderasi guru; multiuser daring memerlukan backend.",
+        "Papan KWL / Diskusi Terstruktur": "Tiga kolom Know, Want to Know, Learned; kartu dapat dipindah dan disunting, guru dapat merangkum bukti perubahan pemahaman.",
+        "Peta Konsep Sentuh": "Node konsep dan hubungan berlabel dapat dipindah; jangan menjadikan garis tanpa hubungan bermakna sebagai bukti pemahaman.",
+        "Peta/Diagram Sentuh": "Hotspot besar mengungkap bagian dan penjelasan; area tak tumpang tindih; sediakan daftar aksesibel alternatif.",
+        "Galeri/Museum Virtual Sentuh": "Navigasi ruang/kartu koleksi per layar, sumber/keterangan aset dan tombol kembali jelas, tanpa scroll di sesi presentasi.",
+        "Grafik/Bagan Data Interaktif": "Data dan sumbu terlihat benar, manipulasi parameter memperbarui grafik, sediakan tabel data dan jangan mengarang data empiris.",
+        "Video Interaktif (Jeda + Kuis)": "Guru menentukan titik jeda. Gunakan media berizin/unggahan lokal, tangani kegagalan video, jeda muncul sekali per lintasan dan dapat diputar ulang.",
+        "Simulasi Sentuh": "Parameter terukur, hubungan model dijelaskan, reset kondisi awal, catat asumsi dan keterbatasan; jangan mengklaim eksperimen nyata.",
+        "Presentasi Layar Penuh Sentuh": "Slide paginasi, navigasi besar, kontrol guru, teks cukup besar dari jauh; fullscreen diminta setelah tindakan pengguna."
+      }
+    },
+    {
+      "id": "tim",
+      "label": "Jumlah peserta / tim aktif",
+      "type": "number",
+      "required": true,
+      "shared": false,
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": "putaran",
+      "label": "Jumlah putaran / aktivitas",
+      "type": "number",
+      "required": true,
+      "shared": false,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": "tema",
+      "label": "Tema tampilan",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Modern edukatif",
+        "Petualangan pastel",
+        "Papan kelas digital"
+      ]
+    },
+    {
+      "id": "catatan",
+      "label": "Kebutuhan tambahan",
+      "type": "textarea",
+      "required": false,
+      "shared": false
+    }
+  ],
+  "format": "authored",
+  "original": "",
+  "rules": [],
+  "body": "Buat aplikasi media untuk Interactive Flat Panel (IFP) dengan jenis {{jenis}}.\nKONTEKS\nMata pelajaran: {{mapel}}\nKelas/jenjang: {{kelas}}\nMateri: {{materi}}\nTP: {{tp}}\nPeserta/tim aktif: {{tim}}. Putaran/aktivitas: {{putaran}}. Tema: {{tema}}.\nCatatan guru: {{catatan}}\nMEKANIK KHUSUS\n{{jenisRules}}\nLAYAR SENTUH KELAS\nRancang satu layar aktivitas 16:9 tanpa scroll saat bermain. Formulir pengaturan boleh scroll, tetapi permainan memakai paginasi/scene agar tidak memotong soal. Layout menyesuaikan ukuran layar; sediakan mode laptop/HP sebagai fallback. Target sentuh minimal 56px, tulisan terbaca dari jauh. Gunakan Pointer Events, pointerId, pointer capture dan touch-action yang sesuai hanya pada area interaksi. Dukung multi-touch bila perangkat/browser mampu, uji dengan dua pointer; jangan menjamin semua perangkat mendukung banyak sentuhan. Sediakan fallback mouse/keyboard/giliran.\nKEAKURATAN DAN KELENGKAPAN\nUtamakan tujuan pembelajaran dan sumber yang dilampirkan. Bila sumber belum terbaca, minta sumber sebelum menyusun materi final; jangan mengarang kutipan, halaman, atau data faktual. Bedakan contoh rekaan dari fakta. Sertakan kunci/rubrik dan pembahasan yang konsisten. Jangan menyatakan jawaban terbuka benar hanya karena terisi atau banyak katanya. Sediakan tinjauan guru bila penilaian otomatis tidak memadai.\nIMPLEMENTASI APLIKASI\nHasilkan kode lengkap yang benar-benar dapat dijalankan, bukan tombol demonstrasi atau TODO. Pisahkan data materi/soal, mesin permainan, dan tampilan agar mudah diubah. Gunakan teks Indonesia yang jelas, kontras terbaca, fokus keyboard, dan tombol sentuh besar. Sediakan mulai, jeda, ulangi, petunjuk, pengaturan suara, dan hasil. Audio hanya dimulai setelah interaksi pengguna. Tangani kondisi kosong, jaringan putus, dan penyimpanan browser ditolak dengan fallback yang jujur.\nJangan menanamkan password, token admin, atau service-role key di HTML/JavaScript. Pengunci lokal bukan keamanan akun. Jika diminta database, berikan skema dan aturan akses di server; jika layanan belum dikonfigurasi, tampilkan status lokal, bukan hasil sinkronisasi palsu. Gunakan identitas minimum dan jangan meminta data pribadi murid yang tidak diperlukan.\nUji aturan skor, jawaban, reset, pergantian pemain, resize, sentuh, dan keyboard. Nyatakan pengujian yang benar-benar dilakukan dan keterbatasan lingkungan. Tidak perlu memakai logo, musik, atau aset acara TV berlisensi.\nHasilkan konfigurasi aktivitas serta soal yang relevan hanya jika jenis medianya memerlukan soal. Timer/pembagi kelompok bukan kuis; jangan menambahkan penilaian materi yang tidak diperlukan.",
+  "example": {
+    "mapel": "IPAS",
+    "kelas": "V SD",
+    "materi": "Rantai makanan di ekosistem sawah",
+    "tp": "Murid menjelaskan hubungan antarmakhluk hidup dan memprediksi dampak perubahan populasi.",
+    "jenis": "Tarik Tambang Digital (Battle 2 Tim)",
+    "tim": "2",
+    "putaran": "10",
+    "tema": "Modern edukatif",
+    "catatan": "Dipakai di IFP 65 inci dalam kelas."
+  }
+}

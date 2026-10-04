@@ -1,0 +1,195 @@
+{
+  "id": "game-tv",
+  "title": "Game Format TV & Kompetisi",
+  "version": 1,
+  "category": "game",
+  "group": "Game & Aktivitas",
+  "order": 28,
+  "description": "Pilih format dan paket babak; mekanik, skor, dan soal dibuat sesuai pilihan.",
+  "source": "Rancangan MAHARATI berdasarkan arahan dan referensi pengguna, 3 Oktober 2026",
+  "needs": [
+    "Materi atau sumber yang relevan tersedia di percakapan AI tujuan."
+  ],
+  "note": "",
+  "fields": [
+    {
+      "id": "mapel",
+      "label": "Mata pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "kelas",
+      "label": "Kelas / jenjang",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "materi",
+      "label": "Topik dan lingkup materi",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "tp",
+      "label": "Tujuan pembelajaran",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "format",
+      "label": "Format kompetisi",
+      "type": "select",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Cerdas Cermat",
+        "Famili 100",
+        "Clash of Champions / Kompetisi Kampus",
+        "Who Wants to Be a Millionaire",
+        "Kuis Terbalik (Jeopardy)",
+        "Sang Pengejar (The Chase)",
+        "Deal or No Deal",
+        "1 vs 100"
+      ],
+      "instructionsBy": {
+        "Cerdas Cermat": "Bedakan wajib (giliran), lemparan (pengalihan soal), dan rebutan (buzzer pertama). Tetapkan siapa boleh menjawab, skor benar/salah dan tie-break. Paket klasik memuat tiga babak lengkap.",
+        "Famili 100": "Gunakan papan beberapa jawaban, face-off, strike, kesempatan steal dan pengali skor sesuai babak. Jawaban dan bobot merupakan rancangan pembelajaran, jangan mengklaim berasal dari survei 100 orang jika tidak ada data survei.",
+        "Clash of Champions / Kompetisi Kampus": "Turnamen lengkap memuat empat babak dengan mekanik berbeda; bracket menyimpan peserta lolos, estafet berpindah anggota, marathon mempunyai jeda. Jelaskan tie-break dan transisi.",
+        "Who Wants to Be a Millionaire": "Tangga kesulitan, checkpoint dan lifeline sekali pakai. Paket lengkap tepat 15 soal dan 3 lifeline. 50:50 menyisakan jawaban benar dan satu pengecoh. Teman/penonton memakai respons nyata dipandu guru atau simulasi yang diberi label jelas.",
+        "Kuis Terbalik (Jeopardy)": "Papan kategori × nilai, sel hanya dimainkan sekali, penentu giliran dan skor sesuai babak. Daily Double/final memakai taruhan poin virtual yang dibatasi saldo; semua kategori dan soal lengkap.",
+        "Sang Pengejar (The Chase)": "Pisahkan cash-builder poin, pilihan tawaran poin, dan lintasan kejaran. Guru atau model permainan transparan menjadi pengejar, bukan AI yang diklaim nyata. Atur jarak awal, kemajuan dan kondisi tertangkap secara deterministik.",
+        "Deal or No Deal": "Kotak berisi poin virtual yang dialokasikan saat mulai dan tidak diubah diam-diam. Buka soal sebelum kotak; tawaran bankir dihitung dengan formula transparan. Peluang/keputusan didiskusikan sebagai materi, tanpa uang atau perjudian.",
+        "1 vs 100": "Satu pemain utama melawan kelompok peserta kelas dengan jumlah yang dapat disesuaikan. Setiap peserta yang salah dieliminasi sesuai aturan; tidak menampilkan 100 peserta daring palsu. Bantuan menghitung respons nyata atau data simulasi berlabel."
+      }
+    },
+    {
+      "id": "babak",
+      "label": "Paket / babak",
+      "type": "select",
+      "required": true,
+      "shared": false,
+      "options": [],
+      "dependsOn": "format",
+      "optionsBy": {
+        "Cerdas Cermat": [
+          "Paket 3 Babak Klasik",
+          "Babak Wajib",
+          "Babak Lemparan",
+          "Babak Rebutan",
+          "Babak Final Penentu Juara"
+        ],
+        "Famili 100": [
+          "Turnamen Lengkap",
+          "Babak Face-Off",
+          "Babak Nilai Tunggal",
+          "Babak Nilai Ganda",
+          "Babak Head-to-Head",
+          "Babak Jackpot"
+        ],
+        "Clash of Champions / Kompetisi Kampus": [
+          "Turnamen Lengkap 4 Babak",
+          "Buzzer Rebutan",
+          "Tebak Kata Estafet",
+          "Stamina Akademik (Marathon)",
+          "Sistem Gugur (Bracket)",
+          "Kolaborasi Tim",
+          "Grand Final"
+        ],
+        "Who Wants to Be a Millionaire": [
+          "Sesi Lengkap Hot Seat (15 Soal + 3 Lifeline)",
+          "Babak Berjenjang",
+          "Lifeline 50:50",
+          "Lifeline Tanya Teman",
+          "Lifeline Tanya Penonton",
+          "Soal Sejuta"
+        ],
+        "Kuis Terbalik (Jeopardy)": [
+          "Papan Lengkap",
+          "Babak Single Jeopardy",
+          "Babak Double Jeopardy",
+          "Kotak Harta (Daily Double)",
+          "Babak Final Jeopardy"
+        ],
+        "Sang Pengejar (The Chase)": [
+          "Sesi Lengkap",
+          "Babak Kumpul Uang Solo",
+          "Babak Pilih Tawaran",
+          "Babak Kejaran Final",
+          "Babak Tim Gabungan"
+        ],
+        "Deal or No Deal": [
+          "Sesi Lengkap Buka Kotak",
+          "Babak Buka Kotak Bertahap",
+          "Tawaran Bankir",
+          "Babak Kotak Kembar",
+          "Ronde Kilat"
+        ],
+        "1 vs 100": [
+          "Sesi Lengkap (The One vs The Mob)",
+          "Babak Eliminasi Mob",
+          "Bantuan Poll the Mob",
+          "Bantuan Ask the Mob",
+          "Babak Push On"
+        ]
+      }
+    },
+    {
+      "id": "tim",
+      "label": "Jumlah tim / pemain",
+      "type": "number",
+      "required": true,
+      "shared": false,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": "soal",
+      "label": "Jumlah soal per babak (kecuali format menetapkan jumlah)",
+      "type": "number",
+      "required": true,
+      "shared": false,
+      "min": 1,
+      "max": 100
+    },
+    {
+      "id": "kendali",
+      "label": "Kendali",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Guru sebagai host",
+        "Host + buzzer tim pada satu layar",
+        "Peserta mandiri"
+      ]
+    },
+    {
+      "id": "aturan",
+      "label": "Penyesuaian aturan",
+      "type": "textarea",
+      "required": false,
+      "shared": false
+    }
+  ],
+  "format": "authored",
+  "original": "",
+  "rules": [],
+  "body": "Buat aplikasi kompetisi edukasi terinspirasi format {{format}}, pilihan {{babak}}.\nKONTEKS\nMata pelajaran: {{mapel}}\nKelas/jenjang: {{kelas}}\nMateri: {{materi}}\nTP: {{tp}}\nPeserta/tim: {{tim}}. Target soal per babak: {{soal}} (jumlah khusus format seperti hot seat 15 soal lebih diutamakan). Kendali: {{kendali}}.\nPenyesuaian: {{aturan}}\nMEKANIK WAJIB FORMAT\n{{formatRules}}\nPaket lengkap harus memiliki seluruh babak, transisi, reset, skor kumulatif, seri, dan juara. Babak individual hanya membuat mekanik babak yang dipilih. Tampilkan aturan skor sebelum bermain dan simpan log perubahan. Buzzer hanya menerima pemicu sah saat terbuka; jangan membiarkan jawaban/skor terhitung dua kali.\nTema dan aset visual orisinal untuk MAHARATI. Sebut sebagai adaptasi edukatif, bukan produk resmi penyelenggara TV. Semua hadiah berupa poin virtual.\nKEAKURATAN DAN KELENGKAPAN\nUtamakan tujuan pembelajaran dan sumber yang dilampirkan. Bila sumber belum terbaca, minta sumber sebelum menyusun materi final; jangan mengarang kutipan, halaman, atau data faktual. Bedakan contoh rekaan dari fakta. Sertakan kunci/rubrik dan pembahasan yang konsisten. Jangan menyatakan jawaban terbuka benar hanya karena terisi atau banyak katanya. Sediakan tinjauan guru bila penilaian otomatis tidak memadai.\nIMPLEMENTASI APLIKASI\nHasilkan kode lengkap yang benar-benar dapat dijalankan, bukan tombol demonstrasi atau TODO. Pisahkan data materi/soal, mesin permainan, dan tampilan agar mudah diubah. Gunakan teks Indonesia yang jelas, kontras terbaca, fokus keyboard, dan tombol sentuh besar. Sediakan mulai, jeda, ulangi, petunjuk, pengaturan suara, dan hasil. Audio hanya dimulai setelah interaksi pengguna. Tangani kondisi kosong, jaringan putus, dan penyimpanan browser ditolak dengan fallback yang jujur.\nJangan menanamkan password, token admin, atau service-role key di HTML/JavaScript. Pengunci lokal bukan keamanan akun. Jika diminta database, berikan skema dan aturan akses di server; jika layanan belum dikonfigurasi, tampilkan status lokal, bukan hasil sinkronisasi palsu. Gunakan identitas minimum dan jangan meminta data pribadi murid yang tidak diperlukan.\nUji aturan skor, jawaban, reset, pergantian pemain, resize, sentuh, dan keyboard. Nyatakan pengujian yang benar-benar dilakukan dan keterbatasan lingkungan. Tidak perlu memakai logo, musik, atau aset acara TV berlisensi.",
+  "example": {
+    "mapel": "IPAS",
+    "kelas": "V SD",
+    "materi": "Rantai makanan di ekosistem sawah",
+    "tp": "Murid menjelaskan hubungan antarmakhluk hidup dan memprediksi dampak perubahan populasi.",
+    "format": "Cerdas Cermat",
+    "babak": "Paket 3 Babak Klasik",
+    "tim": "3",
+    "soal": "10",
+    "kendali": "Guru sebagai host",
+    "aturan": "Tidak menggunakan pengurangan poin untuk siswa sekolah dasar."
+  }
+}

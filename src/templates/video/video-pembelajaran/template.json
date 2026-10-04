@@ -1,0 +1,247 @@
+{
+  "id": "video-pembelajaran",
+  "title": "Video Pembelajaran — 4 Tahap",
+  "version": 1,
+  "category": "video",
+  "group": "Produksi Video",
+  "order": 23,
+  "description": "Satu formulir untuk storyboard, grid referensi, gambar scene, dan animasi.",
+  "source": "Adaptasi Generator Prompt Video Pembelajaran (Chain of Prompting) kiriman pengguna.",
+  "needs": [
+    "Materi atau sumber yang relevan tersedia di percakapan AI tujuan."
+  ],
+  "note": "Gunakan tahap secara berurutan di percakapan AI yang sama. Pilihan bahasa, audio, dan karakter diterapkan konsisten pada semua tahap.",
+  "fields": [
+    {
+      "id": "judul",
+      "label": "Judul video",
+      "type": "text",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "mapel",
+      "label": "Mata pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "kelas",
+      "label": "Kelas / jenjang",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "materi",
+      "label": "Topik dan lingkup materi",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "tp",
+      "label": "Tujuan pembelajaran",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "jenisVideo",
+      "label": "Jenis video",
+      "type": "select",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Video Konsep",
+        "Video Eksperimen",
+        "Video Demonstrasi",
+        "Video Storytelling",
+        "Video Prosedur / Tutorial",
+        "Video Studi Kasus",
+        "Video Problem-Based Learning",
+        "Video Motivasi / Pengantar",
+        "Video Review / Rangkuman"
+      ],
+      "instructionsBy": {
+        "Video Konsep": "Hook → Pertanyaan → Analogi → Eksplorasi konsep → Contoh → Kesimpulan",
+        "Video Eksperimen": "Alat/bahan → Hipotesis → Prosedur aman → Pengamatan → Hasil → Penjelasan ilmiah",
+        "Video Demonstrasi": "Tujuan → Pengenalan alat → Demonstrasi bertahap → Poin kritis/keselamatan → Hasil → Evaluasi",
+        "Video Storytelling": "Hook → Konflik → Eksplorasi → Resolusi konsep → Refleksi",
+        "Video Prosedur / Tutorial": "Tujuan → Langkah berurutan → Kesalahan umum → Hasil → Pemeriksaan",
+        "Video Studi Kasus": "Fenomena → Masalah → Bukti → Analisis → Solusi → Pelajaran",
+        "Video Problem-Based Learning": "Masalah nyata → Investigasi fakta → Pengujian konsep → Pemecahan → Sintesis",
+        "Video Motivasi / Pengantar": "Hook → Relevansi → Kilasan materi → Ajakan belajar",
+        "Video Review / Rangkuman": "Kilas balik → Peta konsep → Contoh penghubung → Refleksi"
+      }
+    },
+    {
+      "id": "durasi",
+      "label": "Durasi total",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": ["60 detik", "90 detik", "2 menit", "3 menit", "5 menit"]
+    },
+    {
+      "id": "bahasa",
+      "label": "Bahasa narasi",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Bahasa Indonesia",
+        "Bahasa Inggris",
+        "Bahasa Indonesia sederhana"
+      ]
+    },
+    {
+      "id": "gaya",
+      "label": "Gaya visual",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Animasi 3D edukatif",
+        "Animasi 2D",
+        "Realistis sinematik",
+        "Infografis bergerak",
+        "Stop motion"
+      ]
+    },
+    {
+      "id": "animasi",
+      "label": "Jenis animasi",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Gerak natural halus",
+        "Motion graphics",
+        "Whiteboard animation",
+        "Stop motion"
+      ]
+    },
+    {
+      "id": "rasio",
+      "label": "Rasio layar",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": ["16:9", "9:16", "1:1"]
+    },
+    {
+      "id": "resolusi",
+      "label": "Resolusi",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": ["1080p", "720p", "4K"]
+    },
+    {
+      "id": "lokasi",
+      "label": "Lokasi",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": ["Ruang kelas", "Lingkungan sekolah", "Laboratorium", "Sawah"]
+    },
+    {
+      "id": "suasana",
+      "label": "Suasana dan emosi",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Hangat dan ingin tahu",
+        "Ceria dan bersemangat",
+        "Tenang dan reflektif",
+        "Misterius namun ramah anak"
+      ]
+    },
+    {
+      "id": "karakter",
+      "label": "Karakter",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Guru perempuan 3D",
+        "Guru laki-laki 3D",
+        "Murid dan guru",
+        "Tanpa karakter"
+      ]
+    },
+    {
+      "id": "audio",
+      "label": "Audio",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Narasi AI + musik latar lembut",
+        "Dubbing manual guru + musik latar",
+        "Narasi AI tanpa musik",
+        "Tanpa audio"
+      ]
+    },
+    {
+      "id": "popup",
+      "label": "Teks / pop-up",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Kata kunci singkat dan panah",
+        "Diagram bertahap",
+        "Tanpa teks pop-up"
+      ]
+    }
+  ],
+  "format": "authored",
+  "original": "",
+  "rules": [],
+  "body": "",
+  "example": {
+    "mapel": "IPAS",
+    "kelas": "V SD",
+    "materi": "Rantai makanan di ekosistem sawah",
+    "tp": "Murid menjelaskan hubungan antarmakhluk hidup dan memprediksi dampak perubahan populasi.",
+    "judul": "Siapa Makan Siapa di Sawah?",
+    "jenisVideo": "Video Konsep",
+    "durasi": "2 menit",
+    "bahasa": "Bahasa Indonesia",
+    "gaya": "Animasi 3D edukatif",
+    "animasi": "Gerak natural halus",
+    "rasio": "16:9",
+    "resolusi": "1080p",
+    "lokasi": "Sawah",
+    "suasana": "Hangat dan ingin tahu",
+    "karakter": "Guru perempuan 3D",
+    "audio": "Narasi AI + musik latar lembut",
+    "popup": "Kata kunci singkat dan panah"
+  },
+  "stages": [
+    {
+      "id": "storyboard",
+      "title": "Tahap 1 — Storyboard Master",
+      "body": "# TAHAP 1 — STORYBOARD MASTER DAN NASKAH\nBertindak sebagai perancang pembelajaran dan sutradara video.\nKONTEKS\nMata pelajaran: {{mapel}}\nKelas/jenjang: {{kelas}}\nMateri: {{materi}}\nTP: {{tp}}\nJudul: {{judul}}\nJenis: {{jenisVideo}}\nDurasi total: {{durasi}}\nBahasa: {{bahasa}}\nGaya: {{gaya}} / {{animasi}}\nLayar: {{rasio}} / {{resolusi}}\nLokasi: {{lokasi}}\nSuasana: {{suasana}}\nKarakter: {{karakter}}\nAudio: {{audio}}\nPop-up: {{popup}}\nALUR PEDAGOGIS\n{{jenisVideoRules}}\nKEAKURATAN DAN KELENGKAPAN\nUtamakan tujuan pembelajaran dan sumber yang dilampirkan. Bila sumber belum terbaca, minta sumber sebelum menyusun materi final; jangan mengarang kutipan, halaman, atau data faktual. Bedakan contoh rekaan dari fakta. Sertakan kunci/rubrik dan pembahasan yang konsisten. Jangan menyatakan jawaban terbuka benar hanya karena terisi atau banyak katanya. Sediakan tinjauan guru bila penilaian otomatis tidak memadai.\nSusun adegan adaptif agar total durasi sama dengan target. Jangan mengunci semua adegan 8 detik. Gunakan visual hook, penjelasan, demonstrasi, dan refleksi sesuai jenis video. Narasi jelas sekitar 120–135 kata/menit, sesuaikan panjangnya dengan detik setiap adegan dan waktu jeda; jangan memaksa penjelasan panjang dalam klip singkat.\nKeluaran tabel: Scene | Durasi | Latar | Visual/aksi | Narasi dalam {{bahasa}} | Transisi | Tujuan adegan.\nJika audio dipilih tanpa narasi, jangan menambahkan dialog. Jika dubbing manual, siapkan naskah untuk guru, bukan instruksi menghasilkan suara AI. Berhenti setelah tabel dan tunggu Tahap 2."
+    },
+    {
+      "id": "grid",
+      "title": "Tahap 2 — Grid / Lembar Referensi",
+      "body": "# TAHAP 2 — ADAPTIVE STORYBOARD GRID\nGunakan storyboard Tahap 1 dari percakapan ini; minta storyboard jika belum tersedia.\nKONTEKS\nMata pelajaran: {{mapel}}\nKelas/jenjang: {{kelas}}\nMateri: {{materi}}\nTP: {{tp}}\nJudul: {{judul}}\nJenis: {{jenisVideo}}\nDurasi total: {{durasi}}\nBahasa: {{bahasa}}\nGaya: {{gaya}} / {{animasi}}\nLayar: {{rasio}} / {{resolusi}}\nLokasi: {{lokasi}}\nSuasana: {{suasana}}\nKarakter: {{karakter}}\nAudio: {{audio}}\nPop-up: {{popup}}\nBuat satu prompt gambar Bahasa Inggris untuk lembar referensi karakter, latar, dan panel storyboard. Sesuaikan grid dengan jumlah scene: 4 = 2×2, 6 = 2×3, 9 = 3×3; untuk lebih dari 10 scene pisahkan lembar karakter, latar, dan panel inti agar tidak terlalu padat. Pertahankan konsistensi pakaian, proporsi, palet, dan pencahayaan. Jika tanpa karakter, fokus pada objek dan lingkungan.\nKeluaran: rekomendasi grid → Master Image Prompt → Negative Prompt. Negative prompt: no text, no typography, no subtitles, no watermark, no distorted anatomy. Jangan menggambar teks materi pada aset mentah. Tunggu Tahap 3."
+    },
+    {
+      "id": "gambar",
+      "title": "Tahap 3 — Gambar per Scene",
+      "body": "# TAHAP 3 — GAMBAR DETAIL PER SCENE\nGunakan scene Tahap 1 dan lembar referensi Tahap 2, jangan mengubah urutan maupun TP.\nKONTEKS\nMata pelajaran: {{mapel}}\nKelas/jenjang: {{kelas}}\nMateri: {{materi}}\nTP: {{tp}}\nJudul: {{judul}}\nJenis: {{jenisVideo}}\nDurasi total: {{durasi}}\nBahasa: {{bahasa}}\nGaya: {{gaya}} / {{animasi}}\nLayar: {{rasio}} / {{resolusi}}\nLokasi: {{lokasi}}\nSuasana: {{suasana}}\nKarakter: {{karakter}}\nAudio: {{audio}}\nPop-up: {{popup}}\nUntuk setiap scene, buat blok: Nomor | Purpose | Durasi | Prompt Gambar Bahasa Inggris | Negative Prompt.\nKomposisi menyisakan ruang untuk grafis saat editing. Gambar tidak memuat tulisan, rumus, label, atau watermark. Konsistenkan karakter, pencahayaan dan lingkungan antarscene; tanpa karakter berarti fokus objek/latar. Deskripsikan sudut kamera, aksi, lokasi dan kesinambungan dengan frame akhir scene sebelumnya. Negative prompt: no text, no letters, no watermarks, no extra limbs, no blurry details. Kerjakan seluruh scene kemudian tunggu Tahap 4."
+    },
+    {
+      "id": "animasi",
+      "title": "Tahap 4 — Animasi Video",
+      "body": "# TAHAP 4 — PROMPT ANIMASI VIDEO PER SCENE\nGunakan gambar Tahap 3 sebagai opening frame, serta narasi/durasi dari storyboard Tahap 1.\nKONTEKS\nMata pelajaran: {{mapel}}\nKelas/jenjang: {{kelas}}\nMateri: {{materi}}\nTP: {{tp}}\nJudul: {{judul}}\nJenis: {{jenisVideo}}\nDurasi total: {{durasi}}\nBahasa: {{bahasa}}\nGaya: {{gaya}} / {{animasi}}\nLayar: {{rasio}} / {{resolusi}}\nLokasi: {{lokasi}}\nSuasana: {{suasana}}\nKarakter: {{karakter}}\nAudio: {{audio}}\nPop-up: {{popup}}\nBuat blok per scene: Opening Frame | Learning Goal | Main Action | Pop-up | Voice/Audio | Hold Frame | Spesifikasi.\nGerakan memiliki awal stabil, aksi utama halus, dan akhir yang melambat agar dapat disambung. Sesuaikan durasi diam dengan panjang klip; jangan menghabiskan klip pendek hanya untuk diam.\nPop-up mengikuti {{popup}}, dalam {{bahasa}}. Jika tanpa pop-up, jangan menambahkan teks. Jika generator tidak mendukung teks presisi, minta overlay dilakukan di editor video. Audio mengikuti pilihan {{audio}}: dubbing manual tidak memakai suara AI; tanpa audio tidak memakai narasi, musik, atau efek. Narasi AI memakai bahasa pilihan, bukan selalu bahasa Indonesia.\nCantumkan rasio {{rasio}}, resolusi target {{resolusi}}, gaya {{animasi}}. Sesuaikan pembagian klip dengan batas layanan yang benar-benar dipakai; jangan menjanjikan durasi/resolusi yang tidak didukung. Jangan mengklaim video sudah dirender; keluaran tahap ini adalah prompt siap pakai."
+    }
+  ]
+}

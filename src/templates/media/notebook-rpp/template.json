@@ -1,0 +1,102 @@
+{
+  "id": "notebook-rpp",
+  "title": "NotebookLM — Slide dari RPP",
+  "version": 1,
+  "category": "media",
+  "group": "Media & Kreasi",
+  "order": 20,
+  "description": "Bahan tayang sesuai alur pertemuan, dengan pilihan desain dan karakter.",
+  "source": "Contoh prompt slide sumber RPP dari pengguna; parameter desain dan karakter dibuat sebagai isian.",
+  "needs": [
+    "RPP yang memuat pertemuan pilihan, ditambahkan sebagai sumber aktif di NotebookLM.",
+    "Buku/BSE pendukung jika dibutuhkan."
+  ],
+  "note": "",
+  "fields": [
+    {
+      "id": "pertemuan",
+      "label": "Pertemuan yang dibuat",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": ["Pertemuan 1", "Pertemuan 2", "Pertemuan 3", "Pertemuan 4"]
+    },
+    {
+      "id": "tema",
+      "label": "Tema visual",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "3D Glass",
+        "Flat illustration",
+        "Minimalis",
+        "Kolase kertas",
+        "Isometrik"
+      ]
+    },
+    {
+      "id": "warna",
+      "label": "Palet warna",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Pastel lembut",
+        "Biru dan putih",
+        "Warna bumi",
+        "Kontras tinggi"
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "Gaya layout",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Modern, clean, educational",
+        "Minimalis dengan ruang kosong",
+        "Infografis edukatif"
+      ]
+    },
+    {
+      "id": "karakter",
+      "label": "Karakter guru",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Guru perempuan 3D, seragam Pemda khaki, berjilbab, rok panjang, berkacamata",
+        "Guru laki-laki 3D, seragam khaki, berkacamata",
+        "Guru perempuan 2D dengan busana profesional",
+        "Tanpa karakter"
+      ]
+    },
+    {
+      "id": "latar",
+      "label": "Latar belakang",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Terang",
+        "Putih bersih",
+        "Pastel gradasi",
+        "Gelap berkontras tinggi"
+      ]
+    }
+  ],
+  "format": "authored",
+  "original": "",
+  "rules": [],
+  "body": "Saya ingin membuat BAHAN TAYANG PEMBELAJARAN berdasarkan RPP yang tersedia pada sumber.\n\nPERTEMUAN YANG DIBUAT: {{pertemuan}}\n\nGunakan RPP sebagai SUMBER UTAMA. Fokus HANYA pada pertemuan tersebut.\nJika tersedia buku/BSE atau sumber materi lain di NotebookLM, gunakan sebagai sumber materi pendukung sesuai kebutuhan aktivitas pada RPP.\n\nJANGAN:\n- mengubah atau membuat TP baru;\n- membuat aktivitas baru di luar RPP;\n- mengambil materi yang baru dipelajari pada pertemuan berikutnya;\n- menjadikan slide seperti buku teks;\n- mengarang informasi yang tidak didukung sumber.\n\nBuat slide yang dapat LANGSUNG digunakan guru saat mengajar.\nSlide harus mengikuti urutan kegiatan dalam RPP dan membantu:\n- guru menjalankan pembelajaran;\n- murid memahami tujuan;\n- memunculkan pemantik/stimulus;\n- memberikan penguatan konsep secukupnya;\n- memberi instruksi aktivitas secara jelas;\n- menampilkan pertanyaan/masalah yang perlu dikerjakan murid;\n- mendukung pengalaman Memahami → Mengaplikasi → Merefleksi;\n- melakukan checkpoint/asesmen formatif jika terdapat dalam RPP;\n- melakukan refleksi dan penutup;\n- menghubungkan hasil belajar dengan pertemuan berikutnya jika relevan.\n\nUntuk aktivitas murid, tampilkan instruksi yang dapat langsung dibaca di layar, bukan penjelasan untuk guru.\nTentukan jumlah slide secara proporsional sesuai isi dan durasi pertemuan. Jangan memaksakan semua bagian jika tidak diperlukan.\nUrutan slide dapat berupa:\nCover → Tujuan → Pemantik → Penguatan Konsep → Aktivitas sesuai RPP → Pengolahan/Analisis → Checkpoint → Kesimpulan → Refleksi → Pertemuan Berikutnya.\nJika satu aktivitas membutuhkan beberapa slide agar mudah dilakukan murid, pecah secara wajar.\n\nDESAIN:\n- 16:9 widescreen\n- gaya {{layout}}\n- tema {{tema}}\n- warna {{warna}}\n- background {{latar}}\n- teks ringkas dan mudah dibaca dari jauh\n- gunakan diagram, tabel, ilustrasi, gambar, atau visual jika benar-benar membantu pemahaman\n- hindari slide penuh paragraf dan dekorasi berlebihan.\n\nKetentuan karakter: {{karakter}}. Jika memakai karakter, tampilkan sedang menjelaskan di setiap slide tanpa menutupi teks. Jika memilih tanpa karakter, jangan menambahkan karakter guru.\nPastikan hasil akhir terasa sebagai ALUR PEMBELAJARAN, bukan rangkuman materi.\n\nSebelum selesai, cek:\n1. seluruh aktivitas penting pada pertemuan RPP yang dipilih sudah terwakili;\n2. tidak ada aktivitas tambahan di luar RPP;\n3. materi sesuai pertemuan ini;\n4. instruksi murid jelas;\n5. asesmen/checkpoint sesuai RPP;\n6. slide terakhir mengandung refleksi/penutup yang sesuai.\n\nLangsung buat bahan tayangnya.",
+  "example": {
+    "pertemuan": "Pertemuan 1",
+    "tema": "3D Glass",
+    "warna": "Pastel lembut",
+    "layout": "Modern, clean, educational",
+    "karakter": "Guru perempuan 3D, seragam Pemda khaki, berjilbab, rok panjang, berkacamata",
+    "latar": "Terang"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "id": "kamera-aksi",
+  "title": "Kamera Aksi — Gerak & Pelacakan Tangan",
+  "version": 1,
+  "category": "game",
+  "group": "Game & Aktivitas",
+  "order": 29,
+  "description": "11 pilihan interaksi kamera dengan teknik dan batas deteksi yang sesuai.",
+  "source": "Arahan Kamera Aksi dan contoh Word Clash AR kiriman pengguna (dua lampiran Word Clash identik).",
+  "needs": [
+    "Materi atau sumber yang relevan tersedia di percakapan AI tujuan."
+  ],
+  "note": "Deteksi gerak, segmentasi warna, dan pelacakan tangan adalah teknik berbeda. Generator menyesuaikan instruksi dengan permainan yang dipilih.",
+  "fields": [
+    {
+      "id": "mapel",
+      "label": "Mata pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "kelas",
+      "label": "Kelas / jenjang",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "materi",
+      "label": "Topik dan lingkup materi",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "tp",
+      "label": "Tujuan pembelajaran",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "permainan",
+      "label": "Permainan kamera",
+      "type": "select",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Lampu Merah Lampu Hijau",
+        "Freeze Countdown",
+        "Tebak Zona Jawaban (4 kuadran)",
+        "Sapu Kiri-Kanan",
+        "Deteksi Warna",
+        "Kejar Target Cepat",
+        "Kejar Bayangan",
+        "Tepuk Tangan Terdeteksi",
+        "Hitung Gerak Berulang (Lompat)",
+        "Estafet Zona",
+        "Word Clash — Pelacakan Tangan"
+      ],
+      "instructionsBy": {
+        "Lampu Merah Lampu Hijau": "Frame differencing pada ROI tubuh: gerak saat hijau diizinkan, saat merah melewati ambang selama durasi tertentu menjadi pelanggaran. Kalibrasi noise dan jeda pergantian warna.",
+        "Freeze Countdown": "Hitung kestabilan frame pada hitung mundur; toleransi gerak kecil dan pemulihan otomatis jika cahaya berubah.",
+        "Tebak Zona Jawaban (4 kuadran)": "Jumlahkan perubahan piksel tiap kuadran, gunakan dwell time dan cooldown. Gerak seluruh tubuh yang mengenai banyak zona tidak boleh langsung memberi banyak jawaban.",
+        "Sapu Kiri-Kanan": "Deteksi urutan aktivasi zona kiri lalu kanan atau sebaliknya. Ini estimasi gerak kasar, bukan pelacakan tangan presisi.",
+        "Deteksi Warna": "Gunakan segmentasi HSV kartu warna, bukan frame differencing saja. Kalibrasi contoh warna dan toleransi cahaya, hindari warna latar yang sama.",
+        "Kejar Target Cepat": "Target muncul di zona, diterima bila energi gerak cukup di zona target dalam jendela waktu; gunakan cooldown agar tidak terhitung berkali-kali.",
+        "Kejar Bayangan": "Overlay siluet/jejak perubahan frame dan target. Jelaskan bahwa bayangan adalah efek gerak, bukan identifikasi tubuh presisi.",
+        "Tepuk Tangan Terdeteksi": "Frame differencing saja tidak mengenali tepuk secara andal. Gunakan MediaPipe Hands untuk pendekatan jarak dua telapak dengan fase mendekat–menjauh, label sebagai estimasi visual, atau sediakan mode gerak kasar dan tombol manual. Jangan mengklaim kamera mengenali bunyi tepuk.",
+        "Hitung Gerak Berulang (Lompat)": "Frame differencing hanya menghitung siklus gerak kasar, bukan memastikan lompatan. Untuk lompatan gunakan pose tracking opsional; tawarkan gerak duduk/angkat tangan dan hitung manual. Kalibrasi fase aktif–diam serta cooldown.",
+        "Estafet Zona": "Hanya zona tim aktif yang menerima gerak; pindahkan giliran setelah jawaban dinilai, cegah gerak penonton dihitung.",
+        "Word Clash — Pelacakan Tangan": "Gunakan MediaPipe Hands seperti referensi Word Clash: ujung telunjuk landmark 8 sebagai kursor, hit-test target, dwell/pinch terkalibrasi, pembagian area pemain. Jangan tertukar saat tangan bersilangan; jika identitas ambigu, jeda dan kalibrasi ulang. Aset/soal terpisah dari renderer."
+      }
+    },
+    {
+      "id": "pemain",
+      "label": "Pemain",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Satu pemain",
+        "Dua pemain pada satu kamera",
+        "Tim bergiliran"
+      ]
+    },
+    {
+      "id": "jumlah",
+      "label": "Jumlah tantangan",
+      "type": "number",
+      "required": true,
+      "shared": false,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": "sensitivitas",
+      "label": "Sensitivitas awal",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Rendah — ruang ramai",
+        "Sedang — kondisi kelas",
+        "Tinggi — gerak kecil"
+      ]
+    },
+    {
+      "id": "akses",
+      "label": "Kebutuhan gerak / aksesibilitas",
+      "type": "textarea",
+      "required": false,
+      "shared": false
+    }
+  ],
+  "format": "authored",
+  "original": "",
+  "rules": [],
+  "body": "Buat game pembelajaran browser berbasis kamera: {{permainan}}.\nKONTEKS\nMata pelajaran: {{mapel}}\nKelas/jenjang: {{kelas}}\nMateri: {{materi}}\nTP: {{tp}}\nMode: {{pemain}}; tantangan {{jumlah}}; sensitivitas awal {{sensitivitas}}; kebutuhan akses {{akses}}.\nTEKNIK KHUSUS\n{{permainanRules}}\nUntuk gerak kasar, gunakan getUserMedia dan frame differencing canvas beresolusi rendah tanpa library berat. Jangan menyebut teknik ini AR spasial atau pengenalan pose. Untuk mode yang secara eksplisit memerlukan tangan/pose, gunakan library tracking yang diperlukan saja; jelaskan unduhan model, lisensi, ketergantungan jaringan dan fallback.\nPERILAKU KAMERA\nMinta izin setelah tombol Mulai Kamera. Jalankan pada HTTPS atau localhost. Proses frame lokal; tidak merekam, menyimpan, atau mengirim video/gambar ke server. Hentikan semua track saat selesai, keluar, atau komponen dilepas. Tangani izin ditolak, perangkat tak tersedia, kamera sedang dipakai, model gagal dimuat, dan tab tersembunyi. Berikan kontrol sentuh/mouse/keyboard agar permainan tetap dapat digunakan.\nSediakan preview bercermin, periksa transformasi koordinat agar kiri-kanan cocok, overlay zona, kalibrasi cahaya, slider sensitivitas, ambang minimum, dwell time, hysteresis dan cooldown. Reset baseline setelah perubahan besar kamera/cahaya. Jangan memberi skor dari satu frame noise; tampilkan indikator deteksi agar guru memahami batasnya.\nBerikan jarak aman dan opsi gerak ringan/duduk. Ketepatan jawaban dan skor refleks dipisahkan, gunakan jeda guru untuk pembahasan.\nKEAKURATAN DAN KELENGKAPAN\nUtamakan tujuan pembelajaran dan sumber yang dilampirkan. Bila sumber belum terbaca, minta sumber sebelum menyusun materi final; jangan mengarang kutipan, halaman, atau data faktual. Bedakan contoh rekaan dari fakta. Sertakan kunci/rubrik dan pembahasan yang konsisten. Jangan menyatakan jawaban terbuka benar hanya karena terisi atau banyak katanya. Sediakan tinjauan guru bila penilaian otomatis tidak memadai.\nIMPLEMENTASI APLIKASI\nHasilkan kode lengkap yang benar-benar dapat dijalankan, bukan tombol demonstrasi atau TODO. Pisahkan data materi/soal, mesin permainan, dan tampilan agar mudah diubah. Gunakan teks Indonesia yang jelas, kontras terbaca, fokus keyboard, dan tombol sentuh besar. Sediakan mulai, jeda, ulangi, petunjuk, pengaturan suara, dan hasil. Audio hanya dimulai setelah interaksi pengguna. Tangani kondisi kosong, jaringan putus, dan penyimpanan browser ditolak dengan fallback yang jujur.\nJangan menanamkan password, token admin, atau service-role key di HTML/JavaScript. Pengunci lokal bukan keamanan akun. Jika diminta database, berikan skema dan aturan akses di server; jika layanan belum dikonfigurasi, tampilkan status lokal, bukan hasil sinkronisasi palsu. Gunakan identitas minimum dan jangan meminta data pribadi murid yang tidak diperlukan.\nUji aturan skor, jawaban, reset, pergantian pemain, resize, sentuh, dan keyboard. Nyatakan pengujian yang benar-benar dilakukan dan keterbatasan lingkungan. Tidak perlu memakai logo, musik, atau aset acara TV berlisensi.",
+  "example": {
+    "mapel": "IPAS",
+    "kelas": "V SD",
+    "materi": "Rantai makanan di ekosistem sawah",
+    "tp": "Murid menjelaskan hubungan antarmakhluk hidup dan memprediksi dampak perubahan populasi.",
+    "permainan": "Tebak Zona Jawaban (4 kuadran)",
+    "pemain": "Satu pemain",
+    "jumlah": "10",
+    "sensitivitas": "Sedang — kondisi kelas",
+    "akses": "Sediakan pilihan gerak tangan sambil duduk."
+  }
+}

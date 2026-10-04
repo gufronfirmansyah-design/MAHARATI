@@ -1,0 +1,140 @@
+{
+  "id": "misi-petualangan",
+  "title": "Misi Seru — 36 Tema Petualangan",
+  "version": 1,
+  "category": "game",
+  "group": "Game & Aktivitas",
+  "order": 27,
+  "description": "Game edukasi dengan misi, tantangan belajar, dan progres yang jelas.",
+  "source": "Rancangan MAHARATI berdasarkan arahan dan referensi pengguna, 3 Oktober 2026",
+  "needs": [
+    "Materi atau sumber yang relevan tersedia di percakapan AI tujuan."
+  ],
+  "note": "",
+  "fields": [
+    {
+      "id": "mapel",
+      "label": "Mata pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "kelas",
+      "label": "Kelas / jenjang",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "materi",
+      "label": "Topik dan lingkup materi",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "tp",
+      "label": "Tujuan pembelajaran",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "tema",
+      "label": "Tema petualangan",
+      "type": "select",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Pemadam Kebakaran",
+        "Kurir Paket Misterius",
+        "Robot Sortir Sampah",
+        "Dapur Pesanan Kilat",
+        "Mengantar Makanan",
+        "Penjaga Kebun Binatang",
+        "Detektif Museum",
+        "Tangkap Pencuri",
+        "Membuka Brankas Rahasia",
+        "Rumah Hantu Lucu",
+        "Menjelajah Candi",
+        "Balap Perahu",
+        "Penjelajah Labirin",
+        "Lompat Awan",
+        "Menghindari Meteor",
+        "Menyeberangi Sungai Buaya",
+        "Pesawat Kertas",
+        "Menjinakkan Bom",
+        "Ekspedisi Pulau Harta",
+        "Gua Kristal",
+        "Menyelam Mutiara",
+        "Berburu Dinosaurus",
+        "Mancing Ikan",
+        "Berkemah di Hutan",
+        "Kebun Ajaib",
+        "Ramuan Ajaib",
+        "Menyelamatkan Telur Naga",
+        "Menyelamatkan Kastel",
+        "Bangun Jembatan",
+        "Menara Penyelamat",
+        "Selamatkan Hewan Hutan",
+        "Bersihkan Laut",
+        "Kota Mini",
+        "Panjat Pinang",
+        "Space War",
+        "Membangun Roket"
+      ]
+    },
+    {
+      "id": "mode",
+      "label": "Mode pemain",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": ["Solo", "Dua tim bergantian", "Kelompok kooperatif"]
+    },
+    {
+      "id": "misi",
+      "label": "Jumlah misi",
+      "type": "number",
+      "required": true,
+      "shared": false,
+      "min": 1,
+      "max": 20
+    },
+    {
+      "id": "kontrol",
+      "label": "Kontrol",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Sentuh / mouse dan keyboard",
+        "IFP multi-touch dengan fallback giliran"
+      ]
+    },
+    {
+      "id": "kesulitan",
+      "label": "Kesulitan",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": ["Mudah bertahap", "Sedang", "Tantangan lanjut"]
+    }
+  ],
+  "format": "authored",
+  "original": "",
+  "rules": [],
+  "body": "Buat game edukasi bertema {{tema}}.\nKONTEKS\nMata pelajaran: {{mapel}}\nKelas/jenjang: {{kelas}}\nMateri: {{materi}}\nTP: {{tp}}\nMode: {{mode}}; jumlah misi: {{misi}}; kontrol: {{kontrol}}; kesulitan: {{kesulitan}}.\nRancang cerita pendek ramah usia, tujuan akhir, peta progres, dan misi yang mekaniknya benar-benar mengikuti tema. Contoh: sortir sampah menggunakan klasifikasi; detektif memakai bukti dan inferensi; membangun jembatan memakai pilihan struktur; roket memakai urutan/simulasi konsep; balapan maju melalui tantangan belajar. Jangan hanya mengganti gambar latar pada kuis yang sama.\nSetiap misi memuat tujuan, aturan interaksi, tantangan terkait TP, kriteria sukses, umpan balik dan kesempatan perbaikan. Berikan hint bertahap tanpa langsung membocorkan jawaban, checkpoint dan lanjutkan sesi. Semua misi terisi lengkap.\nTema bom, hantu, dinosaurus, perang antariksa, dan buaya disajikan sebagai fantasi kartun non-grafis dengan bahaya simulasi, bukan petunjuk aktivitas berbahaya. Reward adalah poin virtual, tidak melibatkan uang atau taruhan.\nSkor ketepatan dan progres belajar dipisahkan dari waktu/refleks. Sediakan jeda dan mode tanpa batas waktu untuk kebutuhan aksesibilitas.\nKEAKURATAN DAN KELENGKAPAN\nUtamakan tujuan pembelajaran dan sumber yang dilampirkan. Bila sumber belum terbaca, minta sumber sebelum menyusun materi final; jangan mengarang kutipan, halaman, atau data faktual. Bedakan contoh rekaan dari fakta. Sertakan kunci/rubrik dan pembahasan yang konsisten. Jangan menyatakan jawaban terbuka benar hanya karena terisi atau banyak katanya. Sediakan tinjauan guru bila penilaian otomatis tidak memadai.\nIMPLEMENTASI APLIKASI\nHasilkan kode lengkap yang benar-benar dapat dijalankan, bukan tombol demonstrasi atau TODO. Pisahkan data materi/soal, mesin permainan, dan tampilan agar mudah diubah. Gunakan teks Indonesia yang jelas, kontras terbaca, fokus keyboard, dan tombol sentuh besar. Sediakan mulai, jeda, ulangi, petunjuk, pengaturan suara, dan hasil. Audio hanya dimulai setelah interaksi pengguna. Tangani kondisi kosong, jaringan putus, dan penyimpanan browser ditolak dengan fallback yang jujur.\nJangan menanamkan password, token admin, atau service-role key di HTML/JavaScript. Pengunci lokal bukan keamanan akun. Jika diminta database, berikan skema dan aturan akses di server; jika layanan belum dikonfigurasi, tampilkan status lokal, bukan hasil sinkronisasi palsu. Gunakan identitas minimum dan jangan meminta data pribadi murid yang tidak diperlukan.\nUji aturan skor, jawaban, reset, pergantian pemain, resize, sentuh, dan keyboard. Nyatakan pengujian yang benar-benar dilakukan dan keterbatasan lingkungan. Tidak perlu memakai logo, musik, atau aset acara TV berlisensi.",
+  "example": {
+    "mapel": "IPAS",
+    "kelas": "V SD",
+    "materi": "Rantai makanan di ekosistem sawah",
+    "tp": "Murid menjelaskan hubungan antarmakhluk hidup dan memprediksi dampak perubahan populasi.",
+    "tema": "Robot Sortir Sampah",
+    "mode": "Kelompok kooperatif",
+    "misi": "5",
+    "kontrol": "Sentuh / mouse dan keyboard",
+    "kesulitan": "Mudah bertahap"
+  }
+}

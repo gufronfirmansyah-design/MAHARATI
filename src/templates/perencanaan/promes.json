@@ -1,0 +1,74 @@
+{
+  "id": "promes",
+  "title": "Program Semester (Prosem)",
+  "group": "Perencanaan",
+  "source": "5. PROMES.docx",
+  "description": "Tempatkan alokasi modul pada bulan dan minggu efektif.",
+  "needs": [
+    "Program Tahunan final.",
+    "Kalender pendidikan yang sesuai tahun pelajaran dan daerah."
+  ],
+  "fields": [
+    {
+      "id": "tahun",
+      "label": "Tahun pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true,
+      "placeholder": "Contoh: 2026/2027"
+    },
+    {
+      "id": "mapel",
+      "label": "Mata pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true,
+      "placeholder": "Contoh: Matematika"
+    },
+    {
+      "id": "kelas",
+      "label": "Kelas",
+      "type": "text",
+      "required": true,
+      "shared": true,
+      "placeholder": "Contoh: VII"
+    },
+    {
+      "id": "semester",
+      "label": "Semester",
+      "type": "select",
+      "required": true,
+      "shared": true,
+      "options": ["1", "2"]
+    },
+    {
+      "id": "fase",
+      "label": "Fase",
+      "type": "select",
+      "required": true,
+      "shared": true,
+      "options": ["Fondasi", "A", "B", "C", "D", "E", "F", "Tidak berlaku"]
+    },
+    {
+      "id": "jp",
+      "label": "JP per minggu",
+      "type": "number",
+      "required": true,
+      "shared": true,
+      "min": 1
+    }
+  ],
+  "note": "Tabel tahun 2026–2027 dan materi IPA tetap dipertahankan sebagai contoh dalam naskah asli, bukan data kelas Anda. Gunakan Prota dan kalender pendidikan sebagai sumber.",
+  "original": "Selanjutnya buatkan Program Semester.\nBuat hasil akhir dalam satu file Microsoft Word .docx dengan ketentuan:\nukuran halaman A4;\norientasi landscape;\nmenggunakan tabel Word yang sebenarnya;\ntabel menyesuaikan lebar halaman;\ngunakan bahasa Indonesia formal, jelas, dan ringkas.\nDalam prompt ini, tanda | digunakan sebagai pemisah kolom tabel.\nContoh:\nBulan | Minggu 1 | Minggu 2 | Minggu 3 | Minggu 4\nDalam file Word, ubah format tersebut menjadi tabel Word yang sebenarnya.\n==================================================\nA. PERAN DAN TUGAS\n==================================================\nKamu adalah Curriculum Planning Architect yang bertugas menyusun Program Semester berdasarkan Program Tahunan dan kalender pendidikan.\nTugas kamu adalah:\nmenempatkan setiap modul ke bulan dan minggu efektif;\nmembagikan JP modul ke minggu yang tersedia;\nmemastikan total JP setiap modul sesuai Prota;\nmenghitung jam efektif, jam cadangan, dan total JP semester;\nmembuat tabel Promes yang siap digunakan.\nJangan:\nmengubah kode modul;\nmengubah judul modul;\nmengubah kode atau rumusan TP;\nmengubah alokasi JP modul;\nmembuat atau menghapus modul;\nmemindahkan modul ke semester lain;\nmenulis kegiatan pembelajaran;\nmembuat asesmen.\n==================================================\nB. INPUT dari hasil percakapan dan file sebelumnya ditambah dengan file kalender pendidikan yang saya kirim\n==================================================\nC. ATURAN PENYUSUNAN\n==================================================\nGunakan seluruh modul dari Prota.\nUrutkan modul sesuai urutan Prota.\nDistribusikan JP modul ke minggu efektif secara berurutan.\nIsi setiap minggu sesuai jumlah JP per minggu.\nContoh:\nJika alokasi waktu 4 JP per minggu, isi minggu efektif dengan angka 4.\nJika satu modul memiliki 12 JP dan alokasi per minggu 4 JP, tempatkan modul tersebut pada tiga minggu efektif.\nJangan menempatkan JP pada minggu libur atau tidak efektif.\nJangan mengubah total JP modul.\nJika satu modul selesai di tengah minggu dan pola pertemuan memungkinkan, modul berikutnya dapat dimulai pada sisa JP minggu tersebut.\nJam cadangan dihitung dengan rumus:\nJam Cadangan = Total JP Tersedia − Total JP Modul\nJika seluruh modul tidak tertampung, beri catatan bahwa alokasi perlu ditinjau kembali.\n==================================================\nE. STRUKTUR OUTPUT\n==================================================\nTuliskan judul:\nPROGRAM SEMESTER\nTampilkan identitas:\nTahun Pelajaran:\nMata Pelajaran:\nKelas/Semester:\nFase:\nAlokasi Waktu: ... JP/Minggu\nTabel Program Semester\nGunakan format matriks.\nKolom awal:\n\n|Bab (Materi Pokok)| Jumlah JP | Kemudian tambahkan kolom bulan dan minggu sesuai semester.\nContoh Semester 1:\nMATERI POKOK\nA. WAKTU\nJULI 2026\nAGUST 2026\nSEPT 2026\nOKT 2026\nNOV 2026\nDES 2026\nKET\n\n\n1\n2\n3\n4\n5\n1\n2\n3\n4\n5\n1\n2\n3\n4\n5\n1\n2\n3\n4\n5\n1\n2\n3\n4\n5\n1\n2\n3\n4\n5\n\nHakikat Ilmu Sains dan Metode Ilmiah\n20\n \n \n4\n4\n \n4\n4\n4\n \n \n\n \n \nASTS 1\n \n \n \n \n \n \n \n \n \n \n \nASAS 1 2026 - 2027\n \n \n \n \n \nZat dan Perubahannya\n20\n \n \n \n \n \n \n \n \n4\n4\n4\n4\n4\n\n \n \n \n \n \n \n \n \n \n \n \n\n \n \n \n \n \nSuhu, Kalor dan Pemuaian\n16\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n4\n4\n4\n4\n \n \n \n \n \n \n\n \n \n \n \n \nGerak dan Gaya\n12\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n4\n4\n4\n \n \n \n\n \n \n \n \n \nCadangan\n2\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n2\n \n \n\n \n \n \n \n \nJUMLAH JAM PELAJARAN\n70\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\nContoh Semester 2:\nMATERI POKOK\nA. WAKTU\nJanuari 2027\nFebruari 2027\nMaret 2027\nApril 2027\nMei 2027\nJuni 2027\nKET\n\n\n1\n2\n3\n4\n5\n1\n2\n3\n4\n5\n1\n2\n3\n4\n5\n1\n2\n3\n4\n5\n1\n2\n3\n4\n5\n1\n2\n3\n4\n5\n\nHakikat Ilmu Sains dan Metode Ilmiah\n20\n \n \n4\n4\n \n4\n4\n4\n \n \n\n \n \nASTS 1\n \n \n \n \n \n \n \n \n \n \n \nASAS 1 2026 - 2027\n \n \n \n \n \nZat dan Perubahannya\n20\n \n \n \n \n \n \n \n \n4\n4\n4\n4\n4\n\n \n \n \n \n \n \n \n \n \n \n \n\n \n \n \n \n \nSuhu, Kalor dan Pemuaian\n16\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n4\n4\n4\n4\n \n \n \n \n \n \n\n \n \n \n \n \nGerak dan Gaya\n12\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n4\n4\n4\n \n \n \n\n \n \n \n \n \nCadangan\n2\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n2\n \n \n\n \n \n \n \n \nJUMLAH JAM PELAJARAN\n70\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n\nKetentuan:\nBuat satu baris untuk setiap modul.\nIsi kolom minggu dengan jumlah JP.\nKosongkan minggu yang tidak digunakan.\nTandai minggu tidak efektif jika diperlukan.\nJangan menulis kegiatan pembelajaran rinci.\nTambahkan di bagian bawah:\nJumlah Jam Efektif\nJumlah Jam Cadangan\nJumlah Jam Total Semester\nFormat:\nKomponen | Jumlah JP\nJumlah Jam Efektif | ... JP\nJumlah Jam Cadangan | ... JP\nJumlah Jam Total Semester | ... JP\nPastikan:\nJumlah Jam Efektif + Jumlah Jam Cadangan = Jumlah Jam Total Semester\n==================================================\nF. PEMERIKSAAN AKHIR\n==================================================\nPastikan:\nseluruh modul telah dimasukkan;\nurutan modul sesuai Prota;\nkode modul dan kode TP tidak berubah;\nalokasi JP setiap modul sesuai Prota;\ntidak ada JP pada minggu tidak efektif;\ntotal JP mingguan tidak melebihi JP per minggu;\njumlah jam efektif sama dengan total JP seluruh modul;\njam efektif dan jam cadangan sama dengan total JP semester;\nhasil hanya berisi identitas dan tabel Promes.\nGunakan nama file:\nPROMES_[Mata Pelajaran][Kelas][Semester]_[Tahun Pelajaran].docx\n",
+  "rules": [
+    {
+      "start": 2444,
+      "end": 2527,
+      "old": "Tahun Pelajaran:\nMata Pelajaran:\nKelas/Semester:\nFase:\nAlokasi Waktu: ... JP/Minggu",
+      "value": "Tahun Pelajaran: {{tahun}}\nMata Pelajaran: {{mapel}}\nKelas/Semester: {{kelas}}/{{semester}}\nFase: {{fase}}\nAlokasi Waktu: {{jp}} JP/Minggu"
+    }
+  ],
+  "order": 5,
+  "version": 1,
+  "category": "perencanaan"
+}

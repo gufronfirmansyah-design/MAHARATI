@@ -1,0 +1,171 @@
+{
+  "id": "media-interaktif",
+  "title": "Media Pembelajaran Interaktif",
+  "version": 1,
+  "category": "media",
+  "group": "Media & Kreasi",
+  "order": 24,
+  "description": "Rancang media Memahami–Mengaplikasi–Merefleksi dengan asesmen dan umpan balik.",
+  "source": "Adaptasi PromptLab v4 — Media Pembelajaran Bermakna kiriman pengguna; tanpa PIN guru yang tertanam di kode.",
+  "needs": [
+    "Materi atau sumber yang relevan tersedia di percakapan AI tujuan."
+  ],
+  "note": "",
+  "fields": [
+    {
+      "id": "mapel",
+      "label": "Mata pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "kelas",
+      "label": "Kelas / jenjang",
+      "type": "text",
+      "required": true,
+      "shared": true
+    },
+    {
+      "id": "materi",
+      "label": "Topik dan lingkup materi",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "tp",
+      "label": "Tujuan pembelajaran",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "platform",
+      "label": "Platform sasaran",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Website statis",
+        "Google Sites (embed)",
+        "Google Apps Script",
+        "Canva Code"
+      ]
+    },
+    {
+      "id": "database",
+      "label": "Penyimpanan hasil",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Lokal di browser",
+        "Supabase dengan autentikasi dan RLS",
+        "Google Sheets melalui backend terautentikasi"
+      ]
+    },
+    {
+      "id": "modeBelajar",
+      "label": "Cara belajar",
+      "type": "select",
+      "required": true,
+      "shared": false,
+      "options": ["Mandiri / PJJ", "Didampingi guru"]
+    },
+    {
+      "id": "durasi",
+      "label": "Durasi belajar (menit)",
+      "type": "number",
+      "required": true,
+      "shared": false,
+      "min": 10,
+      "max": 240
+    },
+    {
+      "id": "modul",
+      "label": "Komponen pembelajaran",
+      "type": "multiselect",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Pemantik",
+        "Materi bertahap",
+        "Contoh kontekstual",
+        "Cek pemahaman",
+        "Latihan interaktif",
+        "Studi kasus",
+        "Simulasi",
+        "LKPD",
+        "Game edukatif",
+        "Rangkuman",
+        "Asesmen akhir",
+        "Refleksi"
+      ]
+    },
+    {
+      "id": "mikro",
+      "label": "Soal cek per submateri",
+      "type": "number",
+      "required": true,
+      "shared": false,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "id": "akhir",
+      "label": "Soal asesmen akhir",
+      "type": "number",
+      "required": true,
+      "shared": false,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "id": "gaya",
+      "label": "Gaya visual",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Modern edukatif",
+        "Pastel ilustratif",
+        "Minimalis kontras tinggi"
+      ]
+    },
+    {
+      "id": "konteks",
+      "label": "Konteks lokal / kemampuan awal",
+      "type": "textarea",
+      "required": false,
+      "shared": false
+    }
+  ],
+  "format": "authored",
+  "original": "",
+  "rules": [],
+  "body": "Buat media pembelajaran interaktif lengkap berdasarkan kebutuhan berikut.\nKONTEKS\nMata pelajaran: {{mapel}}\nKelas/jenjang: {{kelas}}\nMateri: {{materi}}\nTP: {{tp}}\nPlatform: {{platform}}\nPenyimpanan: {{database}}\nCara belajar: {{modeBelajar}}; durasi inti {{durasi}} menit.\nKomponen dipilih: {{modul}}\nGaya: {{gaya}}\nKonteks awal: {{konteks}}\nKEAKURATAN DAN KELENGKAPAN\nUtamakan tujuan pembelajaran dan sumber yang dilampirkan. Bila sumber belum terbaca, minta sumber sebelum menyusun materi final; jangan mengarang kutipan, halaman, atau data faktual. Bedakan contoh rekaan dari fakta. Sertakan kunci/rubrik dan pembahasan yang konsisten. Jangan menyatakan jawaban terbuka benar hanya karena terisi atau banyak katanya. Sediakan tinjauan guru bila penilaian otomatis tidak memadai.\nRANCANGAN BELAJAR\nPetakan setiap TP ke materi, aktivitas, dan bukti. Susun Memahami → Mengaplikasi → Merefleksi memakai komponen pilihan tanpa mengganti urutan pedagogis. Materi harus menjelaskan konsep dan hubungan sebab-akibat, contoh dan bukan-contoh; jangan hanya ringkasan slide. Beri prasyarat sederhana, petunjuk belajar, dan bantuan bertahap, terutama pada belajar mandiri.\nJika cek pemahaman dipilih, buat tepat {{mikro}} butir per submateri dan hitung totalnya. Jika asesmen akhir dipilih, buat tepat {{akhir}} butir utama. Jangan memaksakan komponen yang tidak dipilih. Tampilkan kriteria sebelum tugas; umpan balik salah memberi petunjuk spesifik, kesempatan revisi, lalu pembahasan. Jawaban benar juga mendapat alasan.\nInteraksi sesuai bentuk: pasangan memeriksa semua pasangan, urutan memeriksa seluruh urutan, jawaban terbuka memakai rubrik/tinjauan. Pisahkan skor game dari bukti ketercapaian TP. Status dibuka, dikerjakan, direvisi, dan dinilai berbeda. Jangan menganggap klik/timer membuktikan tuntas.\nMode guru menyediakan peta TP, kunci, rubrik, dan pemeriksaan hasil. Akses data privat harus melalui autentikasi server, bukan PIN yang tertanam pada halaman. Bila lokal, jelaskan keterbatasan privasinya dan sediakan ekspor hasil.\nAntarmuka dapat scroll agar materi tidak terpotong. Sediakan alternatif tombol/keyboard untuk drag-and-drop, tombol HOME, Kembali, Lanjut, dan pemulihan draf. Jangan memakai SDK platform yang tidak tersedia; siapkan fallback browser standar.\nIMPLEMENTASI APLIKASI\nHasilkan kode lengkap yang benar-benar dapat dijalankan, bukan tombol demonstrasi atau TODO. Pisahkan data materi/soal, mesin permainan, dan tampilan agar mudah diubah. Gunakan teks Indonesia yang jelas, kontras terbaca, fokus keyboard, dan tombol sentuh besar. Sediakan mulai, jeda, ulangi, petunjuk, pengaturan suara, dan hasil. Audio hanya dimulai setelah interaksi pengguna. Tangani kondisi kosong, jaringan putus, dan penyimpanan browser ditolak dengan fallback yang jujur.\nJangan menanamkan password, token admin, atau service-role key di HTML/JavaScript. Pengunci lokal bukan keamanan akun. Jika diminta database, berikan skema dan aturan akses di server; jika layanan belum dikonfigurasi, tampilkan status lokal, bukan hasil sinkronisasi palsu. Gunakan identitas minimum dan jangan meminta data pribadi murid yang tidak diperlukan.\nUji aturan skor, jawaban, reset, pergantian pemain, resize, sentuh, dan keyboard. Nyatakan pengujian yang benar-benar dilakukan dan keterbatasan lingkungan. Tidak perlu memakai logo, musik, atau aset acara TV berlisensi.\nKeluaran: struktur berkas, seluruh kode, model data konten terpisah, langkah menjalankan, serta skenario pengujian.",
+  "example": {
+    "mapel": "IPAS",
+    "kelas": "V SD",
+    "materi": "Rantai makanan di ekosistem sawah",
+    "tp": "Murid menjelaskan hubungan antarmakhluk hidup dan memprediksi dampak perubahan populasi.",
+    "platform": "Website statis",
+    "database": "Lokal di browser",
+    "modeBelajar": "Didampingi guru",
+    "durasi": "70",
+    "modul": [
+      "Pemantik",
+      "Materi bertahap",
+      "Contoh kontekstual",
+      "Cek pemahaman",
+      "Latihan interaktif",
+      "Asesmen akhir",
+      "Refleksi"
+    ],
+    "mikro": "3",
+    "akhir": "10",
+    "gaya": "Modern edukatif",
+    "konteks": "Murid mengenal makhluk hidup di lingkungan sawah."
+  }
+}

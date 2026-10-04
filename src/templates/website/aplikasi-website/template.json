@@ -1,0 +1,105 @@
+{
+  "id": "aplikasi-website",
+  "title": "Generator Aplikasi / Website",
+  "version": 1,
+  "category": "website",
+  "group": "Media & Kreasi",
+  "order": 30,
+  "description": "Susun spesifikasi aplikasi, lalu gunakan di Gemini Gem pilihan Bapak.",
+  "source": "Rancangan MAHARATI berdasarkan arahan dan referensi pengguna, 3 Oktober 2026",
+  "needs": [
+    "Materi atau sumber yang relevan tersedia di percakapan AI tujuan."
+  ],
+  "note": "Salin prompt, lalu buka Gem. Gem mungkin memerlukan akun Google atau izin akses. Isi Gem tidak dibaca atau disalin otomatis oleh MAHARATI.",
+  "fields": [
+    {
+      "id": "nama",
+      "label": "Nama aplikasi",
+      "type": "text",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "tujuan",
+      "label": "Tujuan dan masalah yang diselesaikan",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "pengguna",
+      "label": "Pengguna dan hak akses",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "fitur",
+      "label": "Fitur utama",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "platform",
+      "label": "Target platform",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Website responsif",
+        "Aplikasi kelas pada IFP",
+        "Dashboard sekolah"
+      ]
+    },
+    {
+      "id": "data",
+      "label": "Penyimpanan",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Tanpa akun, data lokal",
+        "Supabase Auth + PostgreSQL + RLS",
+        "Supabase untuk data, Drive untuk lampiran"
+      ]
+    },
+    {
+      "id": "gaya",
+      "label": "Arah desain",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Modern profesional",
+        "Minimalis edukatif",
+        "Dashboard biru dan ungu"
+      ]
+    },
+    {
+      "id": "batasan",
+      "label": "Batasan / kebutuhan khusus",
+      "type": "textarea",
+      "required": false,
+      "shared": false
+    }
+  ],
+  "format": "authored",
+  "original": "",
+  "rules": [],
+  "body": "Bantu saya membangun aplikasi {{nama}}.\nTujuan: {{tujuan}}\nPengguna dan hak akses: {{pengguna}}\nFitur: {{fitur}}\nPlatform: {{platform}}\nPenyimpanan: {{data}}\nDesain: {{gaya}}\nBatasan: {{batasan}}\nMulai dengan alur pengguna dan pembagian modul. Setiap fitur besar mempunyai folder sendiri; pisahkan komponen bersama, konfigurasi publik, layanan data, dan migrasi database. Jelaskan berkas yang perlu diubah saat satu halaman diperbaiki. Jangan menyalin seluruh aplikasi menjadi satu file besar bila memakai banyak modul.\nJika memakai akun, autentikasi dikelola layanan resmi dan otorisasi diperiksa server/RLS. Tidak ada password hardcoded, kunci rahasia, atau status admin yang dipercaya dari localStorage. Jangan mengklaim kode browser tidak bisa dilihat; lindungi data privat dan fitur layanan di backend. Tautan lampiran tidak boleh menjadi tautan publik jika isinya privat.\nBuat empty state, loading, error, retry, validasi, konfirmasi hapus, pemulihan draf, dan tata letak HP/laptop. Sediakan skema database, policy per pemilik/peran, serta tes lintas akun jika memakai backend. Jangan mengarang bahwa layanan sudah aktif ketika kredensial belum diatur.\nKeluaran: struktur folder, implementasi lengkap per modul, konfigurasi contoh tanpa rahasia, langkah menjalankan dan deploy, serta pengujian. Tanyakan hanya kebutuhan penting yang belum dapat disimpulkan.",
+  "example": {
+    "nama": "Ruang Proyek Kelas",
+    "tujuan": "Membantu guru mengelola proyek kelompok dan umpan balik.",
+    "pengguna": "Guru mengelola kelas; siswa melihat proyek kelompoknya sendiri.",
+    "fitur": "Daftar proyek, progres, rubrik, komentar guru, dan riwayat revisi.",
+    "platform": "Website responsif",
+    "data": "Supabase Auth + PostgreSQL + RLS",
+    "gaya": "Modern profesional",
+    "batasan": "Nyaman dibuka di HP dan tidak menggunakan API AI berbayar."
+  },
+  "externalLink": {
+    "label": "Buka Gemini Gem — Pembuat Aplikasi",
+    "url": "https://gemini.google.com/gem/1PkRd4F1inLLcsyHaEXNcWCwecTcLRAx-?usp=sharing"
+  }
+}

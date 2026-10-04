@@ -1,0 +1,63 @@
+{
+  "id": "waktu",
+  "title": "Pemetaan modul dan waktu",
+  "group": "Perencanaan",
+  "source": "2 Analisis Modul dan Waktu - ADA ISIAN.docx",
+  "description": "Kelompokkan TP final menjadi modul dengan alokasi waktu yang realistis.",
+  "needs": ["ATP dan TP final beserta pembagian semester.", "Buku/BSE sumber."],
+  "fields": [
+    {
+      "id": "jp",
+      "label": "JP per minggu",
+      "type": "number",
+      "required": true,
+      "shared": true,
+      "min": 1
+    },
+    {
+      "id": "pola",
+      "label": "Pola pertemuan per minggu",
+      "type": "text",
+      "required": true,
+      "placeholder": "Contoh: 1 × 3 JP dan 1 × 2 JP",
+      "help": "Gunakan pola jumlah pertemuan × JP, dipisahkan dengan “dan” atau “+”."
+    },
+    {
+      "id": "minggu1",
+      "label": "Minggu efektif semester 1",
+      "type": "number",
+      "required": true,
+      "min": 1,
+      "max": 53
+    },
+    {
+      "id": "minggu2",
+      "label": "Minggu efektif semester 2",
+      "type": "number",
+      "required": true,
+      "min": 1,
+      "max": 53
+    },
+    {
+      "id": "buffer",
+      "label": "Buffer waktu (%)",
+      "type": "number",
+      "required": true,
+      "min": 0,
+      "max": 100
+    }
+  ],
+  "note": "",
+  "original": "Prompt ini merupakan lanjutan dari Analisis CP–TP.\nGunakan file sumber, CP, ATP, dan daftar Tujuan Pembelajaran final yang telah tersedia pada percakapan sebelumnya.\nJangan meminta saya mengunggah ulang file selama sumber tersebut masih tersedia dalam percakapan.\nTugas Anda adalah:\nmengelompokkan TP final menjadi beberapa modul pembelajaran;\nmenentukan berapa modul yang diperlukan pada setiap Bab;\nmenentukan TP yang masuk ke setiap modul;\nmenentukan jumlah pertemuan setiap modul;\nmenentukan alokasi JP setiap modul;\nmemastikan seluruh TP terwadahi dan total waktu sesuai dengan waktu efektif yang tersedia.\n\nA. INPUT WAKTU\nSaya akan mengisi data berikut:\nJumlah JP per Minggu : 5 JP\nPola Pertemuan per Minggu : 1 × 3 JP dan 1 x 2 JP\nMinggu Efektif Semester 1 : 17 minggu\nMinggu Efektif Semester 2 : 18 minggu\nPersentase Buffer : 10%\nGunakan data tersebut sebagai dasar perhitungan.\n\nB. SUMBER TP\nGunakan ATP dan TP final dari hasil sebelumnya\nPertahankan:\nsemester;\nurutan Bab;\nLingkup Materi/Subbab;\nkode TP;\nrumusan TP;\nurutan TP dalam ATP.\nJangan:\nmengubah TP;\nmemperbaiki rumusan TP;\nmembuat TP baru;\nmenghapus TP;\nmenggabungkan beberapa TP menjadi TP baru;\nmemindahkan TP ke semester lain;\nmengubah urutan Bab.\n\nC. PRINSIP PENGELOMPOKAN MODUL\nSatu Bab tidak otomatis sama dengan satu modul.\nAnalisis setiap Bab dan tentukan apakah lebih tepat menjadi:\nsatu modul;\ndua modul;\ntiga modul;\natau lebih,\nberdasarkan hubungan antartujuan pembelajaran.\nBeberapa TP dapat digabungkan dalam satu modul jika:\nkompetensinya saling berkaitan;\nlingkup materinya berhubungan;\nmemiliki hubungan prasyarat atau perkembangan kemampuan;\nmembentuk satu kesatuan pembelajaran yang logis;\ndapat dicapai dalam rangkaian beberapa pertemuan yang saling berhubungan.\nPisahkan menjadi modul berbeda jika:\nfokus kompetensinya berbeda secara nyata;\nlingkup materinya berbeda secara mendasar;\nTP berikutnya membutuhkan penguasaan TP sebelumnya;\nmembutuhkan produk atau performa utama yang berbeda;\njika digabungkan modul menjadi terlalu luas;\nmembutuhkan jumlah pertemuan yang terlalu banyak untuk satu unit pembelajaran.\nBatas utama\nGunakan Bab sebagai batas utama modul.\nJangan menggabungkan TP dari Bab yang berbeda.\nPertahankan urutan TP sesuai ATP.\n\nD. PENENTUAN JUMLAH MODUL\nJangan menggunakan aturan:\n1 TP = 1 Modul\nJumlah modul harus ditentukan berdasarkan kesatuan kompetensi dan lingkup materi.\nContoh:\nJika Bab I memiliki 5 TP:\nTP1.1 → TP1.2 → TP1.3 → TP1.4 → TP1.5\nsetelah dianalisis mungkin lebih logis menjadi:\nModul 1: TP1.1, TP1.2\nModul 2: TP1.3, TP1.4, TP1.5\nDengan demikian:\nBab I = 2 Modul\nTidak perlu menyamakan jumlah modul setiap Bab.\n\nE. KODE MODUL\nGunakan kode modul secara berurutan selama satu tahun:\nM1, M2, M3, M4, dan seterusnya.\nKetentuan:\ndimulai dari M1 pada Semester 1;\nterus berlanjut sampai Semester 2;\njangan mengulang M1 pada Bab berikutnya;\njangan memulai kembali dari M1 pada Semester 2.\nBuat judul modul yang:\nsingkat;\nmenggambarkan kompetensi atau materi utamanya;\nsesuai dengan TP yang dicakup.\n\nF. ANALISIS WAKTU\nHitung terlebih dahulu:\nTotal JP Tersedia = Minggu Efektif × JP per Minggu\nKemudian hitung waktu buffer:\nJP Buffer = Persentase Buffer × Total JP Tersedia\nWaktu yang dapat digunakan untuk modul:\nJP Inti = Total JP Tersedia − JP Buffer\nJika pola pertemuan sudah ditentukan, sesuaikan pembulatan JP dengan satuan pertemuan.\nContoh:\nJika:\n1 pertemuan = 3 JP\nmaka alokasi modul sebaiknya berupa kelipatan 3 JP apabila memungkinkan.\nBuffer juga sebaiknya dibulatkan ke jumlah pertemuan yang realistis.\nBuffer digunakan untuk kemungkinan:\nkegiatan sekolah;\nasesmen;\nremedial/pengayaan;\nketerlambatan pembelajaran;\nhari efektif yang tidak dapat digunakan;\nkebutuhan penyesuaian lainnya.\nBuffer jangan dimasukkan ke salah satu modul.\n\nG. PENENTUAN JUMLAH PERTEMUAN\nTentukan jumlah pertemuan setiap modul berdasarkan:\njumlah TP;\nkompleksitas kompetensi;\nkeluasan lingkup materi;\ntingkat kesulitan materi;\nkebutuhan latihan;\npraktik;\npengamatan atau penyelidikan;\ndiskusi/presentasi;\npenyusunan produk;\nkebutuhan mencapai kompetensi secara realistis.\nJangan membagi waktu secara rata untuk semua modul.\nModul sederhana boleh memiliki pertemuan lebih sedikit.\nModul yang lebih kompleks dapat memiliki pertemuan lebih banyak.\nGunakan rumus:\nAlokasi JP Modul = Jumlah Pertemuan × JP per Pertemuan\nContoh jika pola pembelajaran:\n1 × 3 JP per minggu\nmaka:\n2 pertemuan = 6 JP;\n3 pertemuan = 9 JP;\n4 pertemuan = 12 JP;\n5 pertemuan = 15 JP.\n\nH. KESEIMBANGAN WAKTU\nPastikan:\nTotal JP seluruh modul ≤ JP Inti semester\ndan:\nJP Inti + Buffer = Total JP Tersedia\nJika kebutuhan seluruh modul melebihi waktu yang tersedia:\nevaluasi kembali jumlah pertemuan;\nperiksa kemungkinan pengelompokan TP yang lebih efisien;\njangan menghapus TP;\njangan mengurangi tuntutan TP;\njangan memaksakan pembelajaran yang tidak realistis.\nJika setelah dianalisis waktu masih tidak mencukupi, beri tanda:\n[Perlu Penyesuaian Guru]\n\nOUTPUT A — PEMETAAN MODUL DAN ALOKASI WAKTU\nBuat satu tabel utama:\nSemester | Bab | Kode Modul | Judul Modul |Lingkup Materi| Tujuan Pembelajaran (Tulis Kode dan Deskripsi)| Jumlah Pertemuan | Alokasi JP\nKetentuan:\nsatu baris = satu modul;\ntuliskan semua TP yang masuk dalam modul tersebut;\npertahankan kode dan rumusan TP;\nurutkan TP sesuai ATP;\njangan membuat satu baris untuk setiap TP;\njumlah pertemuan merupakan total pertemuan modul;\nalokasi JP merupakan total JP modul.\nContoh struktur:\nSemester\nBab\nKode Modul\nJudul Modul\nLingkup Materi\nKode TP dan Tujuan Pembelajaran yang Dicakup\nPertemuan\nJP\n1\nBab I\nM1\n...\n…\nTP1.1 — ...; TP1.2 — ...\n3\n9\n1\nBab I\nM2\n...\n…\nTP1.3 — ...; TP1.4 — ...\n4\n12\n1\nBab II\nM3\n...\n…\nTP2.1 — ...; TP2.2 — ...\n3\n9\nDengan tabel ini guru langsung dapat melihat:\nBab I → 2 modul → M1 dan M2 → TP apa saja → berapa pertemuan → berapa JP.\n\nOUTPUT B — REKAPITULASI PER BAB DAN SEMESTER\nBuat tabel ringkas:\nSemester | Bab | Jumlah TP | Jumlah Modul | Total Pertemuan | Total JP\nSetelah setiap semester, tambahkan ringkasan:\nMinggu Efektif : ...\nTotal JP Tersedia : ...\nJP untuk Modul : ...\nBuffer : ... JP / ... Pertemuan\nJumlah Modul : ...\nJumlah Pertemuan Modul : ...\nPada akhir tabel tambahkan:\nTOTAL SATU TAHUN\nyang memuat:\njumlah Bab;\njumlah TP;\njumlah modul;\njumlah pertemuan;\ntotal JP modul;\ntotal buffer.\n\nI. VALIDASI AKHIR\nSebelum membuat dokumen, pastikan:\nseluruh TP final telah masuk ke modul;\ntidak ada TP yang hilang;\ntidak ada TP baru;\nkode TP tidak berubah;\nrumusan TP tidak berubah;\nurutan Bab tetap;\nurutan TP tetap sesuai ATP;\nsatu TP tidak dimasukkan ke dua modul tanpa alasan yang jelas;\ntidak otomatis satu TP menjadi satu modul;\njumlah modul setiap Bab berdasarkan kebutuhan;\nseluruh modul berada dalam Bab yang benar;\njumlah pertemuan realistis;\nJP setiap modul sesuai pola pertemuan;\ntotal JP modul tidak melebihi JP inti;\nbuffer tetap tersedia;\nperhitungan Output A dan Output B konsisten.\nLakukan koreksi internal jika ditemukan ketidaksesuaian.\n\nJ. FORMAT DOKUMEN\nBuat hasil akhir dalam satu file Microsoft Word .docx dengan ketentuan:\nukuran halaman A4;\norientasi landscape;\nmenggunakan tabel Word yang sebenarnya;\ntabel menyesuaikan lebar halaman;\nbaris judul tabel diulang pada halaman berikutnya;\nmenggunakan bahasa Indonesia formal, jelas, sistematis, dan ringkas.\nUrutan dokumen:\nJudul\nData Alokasi Waktu\nOUTPUT A — PEMETAAN MODUL DAN ALOKASI WAKTU\nOUTPUT B — REKAPITULASI PER BAB DAN SEMESTER\nJangan membuat:\nProta;\nPromes;\nModul Ajar lengkap;\nlangkah kegiatan pembelajaran;\nasesmen;\nsoal;\ninstrumen penilaian.\nGunakan nama file:\nPEMETAAN_MODUL_DAN_ALOKASI_WAKTU_[Mata Pelajaran]_[Kelas].docx\n",
+  "rules": [
+    {
+      "start": 660,
+      "end": 837,
+      "old": "Jumlah JP per Minggu : 5 JP\nPola Pertemuan per Minggu : 1 × 3 JP dan 1 x 2 JP\nMinggu Efektif Semester 1 : 17 minggu\nMinggu Efektif Semester 2 : 18 minggu\nPersentase Buffer : 10%",
+      "value": "Jumlah JP per Minggu : {{jp}} JP\nPola Pertemuan per Minggu : {{pola}}\nMinggu Efektif Semester 1 : {{minggu1}} minggu\nMinggu Efektif Semester 2 : {{minggu2}} minggu\nPersentase Buffer : {{buffer}}%"
+    }
+  ],
+  "order": 3,
+  "version": 1,
+  "category": "perencanaan"
+}

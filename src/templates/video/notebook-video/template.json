@@ -1,0 +1,30 @@
+{
+  "id": "notebook-video",
+  "title": "NotebookLM — Naskah Video",
+  "version": 1,
+  "category": "video",
+  "group": "Produksi Video",
+  "order": 22,
+  "description": "Naskah video yang mengikuti kalimat pada sumber aktif.",
+  "source": "Contoh prompt video NotebookLM dari pengguna.",
+  "needs": [
+    "Buku/bagian materi yang dipilih sebagai sumber aktif di NotebookLM."
+  ],
+  "note": "",
+  "fields": [
+    {
+      "id": "bab",
+      "label": "Bab dan subbab yang dipilih",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    }
+  ],
+  "format": "authored",
+  "original": "",
+  "rules": [],
+  "body": "Tolong buatkan naskah video untuk {{bab}}.\nAturan:\n1. Gunakan data hanya dari sumber yang aktif.\n2. Dilarang menambah/mengurangi redaksi: Gunakan kalimat dari buku secara utuh.",
+  "example": {
+    "bab": "BAB 2 Belajar Berpantun\nA. Menemukan Ciri-Ciri Pantun\nB. Penggunaan Pantun dalam Kehidupan Sehari-hari"
+  }
+}

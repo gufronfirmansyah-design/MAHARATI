@@ -1,0 +1,204 @@
+{
+  "id": "blueprint",
+  "title": "Blueprint / kisi-kisi sumatif",
+  "group": "Sumatif",
+  "source": "8 Blueprint Sumatif.docx",
+  "description": "Susun kisi-kisi, distribusi soal, dan TP umum untuk eRapor.",
+  "needs": [
+    "Analisis CP–TP yang sudah dibatasi sesuai bab dan periode asesmen."
+  ],
+  "fields": [
+    {
+      "id": "mapel",
+      "label": "Mata pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true,
+      "placeholder": "Contoh: Matematika"
+    },
+    {
+      "id": "jenjang",
+      "label": "Jenjang",
+      "type": "select",
+      "required": true,
+      "shared": true,
+      "options": [
+        "PAUD",
+        "SD/MI",
+        "SMP/MTs",
+        "SMA/MA",
+        "SMK/MAK",
+        "SLB",
+        "Pendidikan Kesetaraan",
+        "Lainnya"
+      ]
+    },
+    {
+      "id": "fase",
+      "label": "Fase",
+      "type": "select",
+      "required": true,
+      "shared": true,
+      "options": ["Fondasi", "A", "B", "C", "D", "E", "F", "Tidak berlaku"]
+    },
+    {
+      "id": "kelas",
+      "label": "Kelas",
+      "type": "text",
+      "required": true,
+      "shared": true,
+      "placeholder": "Contoh: VII"
+    },
+    {
+      "id": "semester",
+      "label": "Semester",
+      "type": "select",
+      "required": true,
+      "shared": true,
+      "options": ["1", "2"]
+    },
+    {
+      "id": "jenis",
+      "label": "Jenis asesmen",
+      "type": "select",
+      "required": true,
+      "options": [
+        "Sumatif Tengah Semester",
+        "Sumatif Akhir Semester",
+        "Sumatif Akhir Tahun",
+        "Sumatif Lingkup Materi",
+        "Lainnya"
+      ]
+    },
+    {
+      "id": "jenisLain",
+      "label": "Nama asesmen lainnya",
+      "type": "text",
+      "required": false,
+      "when": "jenis:Lainnya"
+    },
+    {
+      "id": "jumlah",
+      "label": "Jumlah soal",
+      "type": "number",
+      "required": true,
+      "min": 1
+    },
+    {
+      "id": "pg",
+      "label": "Pilihan ganda",
+      "type": "number",
+      "required": true,
+      "min": 0
+    },
+    {
+      "id": "isian",
+      "label": "Isian singkat",
+      "type": "number",
+      "required": true,
+      "min": 0
+    },
+    {
+      "id": "uraian",
+      "label": "Uraian",
+      "type": "number",
+      "required": true,
+      "min": 0
+    },
+    {
+      "id": "durasi",
+      "label": "Waktu (menit)",
+      "type": "number",
+      "required": true,
+      "min": 1
+    },
+    {
+      "id": "konteks",
+      "label": "Konteks lokal",
+      "type": "textarea",
+      "required": false,
+      "fallback": "tidak perlu"
+    },
+    {
+      "id": "cognitivePreset",
+      "label": "Komposisi kognitif",
+      "type": "preset",
+      "required": true,
+      "default": "Custom",
+      "options": ["Rendah", "Sedang", "Tinggi", "Custom"],
+      "help": "Urutan persentase: LOTS · MOTS · HOTS. Pilih Custom untuk mengatur sendiri."
+    },
+    {
+      "id": "lots",
+      "label": "LOTS (%)",
+      "type": "number",
+      "required": false,
+      "min": 0,
+      "max": 100,
+      "decimal": true
+    },
+    {
+      "id": "mots",
+      "label": "MOTS (%)",
+      "type": "number",
+      "required": false,
+      "min": 0,
+      "max": 100,
+      "decimal": true
+    },
+    {
+      "id": "hots",
+      "label": "HOTS (%)",
+      "type": "number",
+      "required": false,
+      "min": 0,
+      "max": 100,
+      "decimal": true
+    },
+    {
+      "id": "batas",
+      "label": "Batas karakter eRapor",
+      "type": "number",
+      "required": false,
+      "min": 1,
+      "fallback": "tidak diberikan"
+    }
+  ],
+  "note": "Dokumen asli memuat dua versi prompt dan sisa percakapan. Keduanya dipertahankan, dengan isian yang disamakan. Distribusi kognitif boleh dikosongkan seluruhnya agar AI menyusunnya sesuai TP. Batas minimal 3 TP umum per semester pada naskah awal dapat berbenturan dengan batas 1–2 TP per bab jika hanya ada satu bab; periksa hasilnya.",
+  "original": "Anda adalah ahli asesmen pendidikan dan perancang evaluasi pembelajaran Kurikulum Merdeka.\nSaya akan mengunggah dokumen Analisis CP–TP yang sebelumnya telah disusun.\nDokumen tersebut sudah saya sesuaikan sehingga hanya memuat Bab dan TP pada semester/periode yang akan dibuat asesmen sumatifnya.\nGunakan dokumen tersebut sebagai SUMBER UTAMA.\nTugas Anda adalah:\nmenyusun blueprint/kisi-kisi asesmen sumatif berdasarkan TP rinci; \nmemastikan distribusi soal proporsional; \nmembuat rekap distribusi soal; \nsetelah blueprint selesai, menyusun TP Umum untuk kebutuhan eRapor berdasarkan TP rinci pada setiap Bab. \nJANGAN membuat soal pada tahap ini.\nHasil akhir berupa blueprint/kisi-kisi, bukan perangkat soal.\n\nA. INPUT ASESMEN\nGunakan data berikut.\nMata Pelajaran: BAHASA INDONESIA\nJenjang: SMP\nFase/Kelas: D/IX\nSemester: I (SATU)\nJenis Asesmen: Sumatif Akhir Semester \nJumlah Soal: 40\nKomposisi Bentuk Soal: 35 pilihan ganda + 5 isian singkat\nWaktu: 120 menit\nKonteks Lokal jika Diperlukan: -\nDistribusi Kognitif yang Diinginkan\nLOTS: 50 %\nMOTS: 30 %\nHOTS: 20 %]\nJika guru tidak menentukan distribusi, buat distribusi yang proporsional sesuai TP dan karakteristik mata pelajaran.\nBatas TP Umum eRapor\nTarget utama: 1 Bab = 1-2 TP Umum tapi 1 semesteri akan ada minimal 3 TP umum\nJika satu Bab memiliki dua kelompok kompetensi yang sangat berbeda dan tidak dapat dirangkum secara wajar dalam satu rumusan, diperbolehkan:\n1 Bab = maksimal 2 TP Umum.\nBatas karakter eRapor: [ISI jika diketahui]\nJika batas karakter tidak diberikan, buat rumusan sesingkat mungkin tetapi tetap bermakna dan mewakili kompetensi utama.\n\nIya, ini lebih rapi. Blueprint asesmen tidak perlu mengulang hasil Analisis CP–TP. Kalau pada tahap sebelumnya guru sudah tahu TP tertentu berasal dari CP/elemen mana, menampilkannya lagi hanya membuat tabel melebar dan tidak dipakai saat menyusun soal.\nJadi saya ubah logikanya menjadi:\nAnalisis CP–TP sudah selesai → pada tahap asesmen kita mulai dari TP rinci.\nAlurnya cukup:\nTP Rinci → Indikator Soal → Nomor Soal → Soal\nSedangkan TP Umum eRapor dikerjakan paling akhir, karena fungsinya untuk pelaporan, bukan untuk merancang soal.\nBerikut versi revisinya.\n\nPROMPT — BLUEPRINT/KISI-KISI ASESMEN SUMATIF + TP UMUM eRAPOR\nAnda adalah ahli asesmen pendidikan dan perancang evaluasi pembelajaran Kurikulum Merdeka.\nSaya akan mengunggah dokumen Analisis CP–TP yang sebelumnya telah disusun.\nDokumen tersebut sudah saya sesuaikan sehingga hanya memuat Bab dan TP pada semester/periode yang akan dibuat asesmen sumatifnya.\nGunakan dokumen tersebut sebagai SUMBER UTAMA.\nTugas Anda adalah:\nmenyusun blueprint/kisi-kisi asesmen sumatif berdasarkan TP rinci;\nmemastikan distribusi soal proporsional;\nmembuat rekap distribusi soal;\nsetelah blueprint selesai, menyusun TP Umum untuk kebutuhan eRapor berdasarkan TP rinci pada setiap Bab.\nJANGAN membuat soal pada tahap ini.\n\nA. IDENTITAS ASESMEN\nMata Pelajaran: [ISI]\nJenjang: [ISI]\nFase/Kelas: [ISI]\nSemester: [ISI]\nJenis Asesmen: [Sumatif Tengah Semester / Sumatif Akhir Semester / lainnya]\nJumlah Soal: [ISI]\nKomposisi Bentuk Soal: [contoh: 25 Pilihan Ganda + 5 Isian Singkat]\nWaktu: [ISI]\nKonteks Lokal: [ISI / tidak perlu]\nDistribusi Kognitif\nLOTS: [ISI %]\nMOTS: [ISI %]\nHOTS: [ISI %]\nJika distribusi tidak diberikan, susun secara proporsional sesuai tuntutan TP dan karakteristik mata pelajaran.\n\nB. SUMBER DATA\nGunakan dokumen Analisis CP–TP yang saya unggah.\nAmbil dari dokumen:\nBab;\nlingkup materi;\nkode TP;\nrumusan TP;\nurutan TP.\nCP dan elemen CP tidak perlu ditampilkan kembali dalam output, karena hubungan CP–TP telah selesai dianalisis pada tahap sebelumnya.\nJika CP tersedia dalam dokumen, gunakan hanya sebagai referensi internal untuk menjaga keselarasan, bukan sebagai kolom blueprint.\nJangan:\nmembuat TP baru;\nmengubah kode TP;\nmengubah redaksi TP;\nmemindahkan TP ke Bab lain;\nmenambahkan materi yang tidak didukung sumber.\n\nC. PRINSIP BLUEPRINT\nBlueprint harus menunjukkan hubungan:\nTP Rinci → Indikator Soal → Materi/Konteks → Bentuk Soal → Nomor Soal\nSetiap nomor soal harus dapat ditelusuri kepada TP rinci yang diukur.\nJangan membuat soal pada tahap ini.\nJangan menggunakan TP Umum eRapor sebagai dasar indikator soal.\nTP Umum eRapor baru dibuat setelah blueprint selesai.\n\nD. DISTRIBUSI SOAL\nJangan membagi jumlah soal secara rata hanya karena terdapat sejumlah TP.\nPertimbangkan:\nkeluasan TP;\nkompleksitas kompetensi;\nlingkup materi;\npentingnya kompetensi dalam Bab;\nkedalaman kemampuan yang dituntut;\nbentuk soal yang digunakan.\nTP yang lebih luas atau kompleks dapat memiliki lebih banyak soal.\nNamun pastikan seluruh TP yang relevan memperoleh bukti asesmen secara proporsional.\nJika terdapat TP yang tidak tepat diukur melalui bentuk asesmen yang dipilih, jangan memaksakan.\nBeri catatan:\nPERLU BUKTI ASESMEN NON-TES\njika diperlukan.\n\nE. INDIKATOR SOAL\nIndikator harus benar-benar diturunkan dari TP rinci.\nGunakan pola jika sesuai:\nDisajikan [stimulus/konteks], peserta didik dapat [kemampuan yang diukur] [objek/materi] dengan tepat.\nIndikator harus:\nspesifik;\ndapat diwujudkan menjadi soal;\nsesuai tuntutan TP;\ntidak lebih rendah atau lebih tinggi secara tidak wajar;\nmenunjukkan kemampuan yang dapat diamati;\nmenyebut konteks/stimulus jika memang diperlukan.\nJangan membuat indikator hanya berdasarkan materi.\nContoh yang kurang tepat:\nPeserta didik mengetahui perubahan wujud benda.\nLebih tepat:\nDisajikan ilustrasi perubahan wujud pada kehidupan sehari-hari, peserta didik dapat menentukan jenis perubahan wujud dan menjelaskan penyebabnya.\n\nF. LEVEL KOGNITIF\nGunakan Taksonomi Bloom secara proporsional.\nLOTS\nUmumnya C1–C2.\nMOTS\nUmumnya C3–C4.\nHOTS\nUmumnya C4–C6 sesuai kompleksitas.\nJangan menentukan level hanya berdasarkan kata kerja.\nPertimbangkan proses berpikir yang benar-benar harus dilakukan murid.\nC4 dapat termasuk MOTS atau HOTS tergantung kompleksitas stimulus dan tuntutan berpikir.\nJangan memaksakan C5/C6 jika tidak sesuai TP.\n\nG. DEPTH OF KNOWLEDGE (DoK)\nGunakan DoK sebagai pelengkap untuk melihat kompleksitas tugas.\nDoK 1\nRecall/reproduksi sederhana.\nDoK 2\nMenggunakan konsep atau keterampilan.\nDoK 3\nPenalaran strategis, analisis, penggunaan bukti, atau keputusan.\nDoK 4\nPemikiran/investigasi luas yang membutuhkan integrasi berbagai informasi dan waktu lebih panjang.\nJangan memaksakan DoK 4 pada tes tertulis singkat jika tidak sesuai.\nBloom dan DoK tidak perlu dibuat sama secara mekanis.\n\nH. BENTUK SOAL\nIkuti komposisi yang diberikan guru.\nContoh:\nPilihan Ganda;\nIsian Singkat;\nUraian;\nbentuk lain jika diberikan.\nTentukan bentuk soal berdasarkan kemampuan yang perlu dibuktikan.\nJangan menentukan bentuk soal hanya untuk memenuhi pembagian jumlah.\n\nI. STIMULUS\nStimulus digunakan jika memang membantu mengukur indikator.\nDapat berupa:\nteks;\nkasus;\ngambar;\ntabel;\ngrafik;\ndata;\ndiagram;\ninfografis;\nsituasi kontekstual.\nStimulus harus:\nrelevan;\nbenar-benar digunakan untuk menjawab;\nmendukung penalaran;\nbukan hiasan;\nsesuai jenjang peserta didik.\nSatu stimulus dapat digunakan untuk beberapa soal jika memang efektif.\n\nJ. LITERASI DAN NUMERASI\nIntegrasikan literasi dan numerasi jika relevan dengan TP.\nLiterasi\nSoal harus meminta murid:\nmenemukan;\nmenginterpretasikan;\nmenghubungkan;\nmengevaluasi;\natau menggunakan informasi.\nBukan sekadar membaca teks panjang.\nNumerasi\nSoal harus meminta murid menggunakan:\nangka;\ndata;\ntabel;\ngrafik;\nukuran;\nhubungan kuantitatif;\natau penalaran matematis.\nJangan memaksakan numerasi pada TP yang tidak relevan.\n\nK. KONTEKS\nJika guru memberikan konteks lokal, gunakan secara natural.\nKonteks dapat berasal dari:\nkehidupan sehari-hari;\nlingkungan;\nsosial;\nbudaya;\nekonomi;\ngeografi;\nmakanan lokal;\nkebiasaan masyarakat;\nfenomena daerah.\nJangan memaksakan konteks lokal pada semua soal.\nKonteks harus membantu mengukur kemampuan, bukan sekadar menempelkan nama daerah.\n\nOUTPUT 1 — BLUEPRINT/KISI-KISI ASESMEN SUMATIF\nLangsung buat blueprint sebagai output pertama.\nGunakan tabel:\nNo. Soal\nBab\nKode TP\nIndikator Soal\nMateri/Lingkup\nBentuk Soal\nBloom/DoK\nStimulus\nKeterangan\nNo. Soal\nNomor soal final.\nBab\nBab tempat TP berada.\nKode TP\nGunakan kode TP asli dari Analisis CP–TP.\nIndikator Soal\nRumusan spesifik kemampuan yang harus ditunjukkan murid.\nMateri/Lingkup\nMateri atau konteks yang digunakan untuk memperoleh bukti kemampuan.\nBentuk Soal\nPG / Isian Singkat / Uraian / bentuk lain sesuai input.\nBloom/DoK\nContoh:\nC2/DoK1\nC3/DoK2\nC4/DoK3\nStimulus\nGunakan kode seperti:\nTeks (Lit)\nKasus\nGambar\nTabel (Num)\nData (Num)\nGrafik (Num)\nDiagram\nInfografis\n—\nJika satu stimulus digunakan bersama, tuliskan:\nTeks (Lit) — No. 6–8\n\nOUTPUT 2 — REKAP DISTRIBUSI SOAL\nSetelah blueprint selesai, buat rekap berikut.\nA. Distribusi Level Kognitif\nKategori\nTarget\nAktual\nNomor Soal\nStatus\nLOTS\n...\n...\n...\n✓/✗\nMOTS\n...\n...\n...\n✓/✗\nHOTS\n...\n...\n...\n✓/✗\n\nB. Distribusi Bentuk Soal\nBentuk Soal\nTarget\nAktual\nNomor Soal\nStatus\nPilihan Ganda\n...\n...\n...\n✓/✗\nIsian Singkat\n...\n...\n...\n✓/✗\nUraian\n...\n...\n...\n✓/✗\nSesuaikan dengan komposisi yang diberikan.\n\nC. Distribusi Stimulus\nJenis\nJumlah\nNomor Soal\nTanpa stimulus khusus\n...\n...\nTeks/Literasi\n...\n...\nKasus\n...\n...\nGambar/Diagram\n...\n...\nTabel/Data/Grafik\n...\n...\nLainnya\n...\n...\nJangan memaksakan semua jenis stimulus harus muncul.\n\nD. Distribusi Soal per TP\nKode TP\nBab\nJumlah Soal\nNomor Soal\nBentuk Soal\nTabel ini harus memudahkan guru melihat:\nTP mana mendapat berapa bukti asesmen.\n\nE. Distribusi Soal per Bab\nBab\nTP yang Diukur\nJumlah Soal\nNomor Soal\nGunakan untuk memeriksa proporsionalitas cakupan materi.\n\nOUTPUT 3 — TP UMUM UNTUK eRAPOR\nBaru setelah blueprint dan rekap selesai, buat TP Umum eRapor.\nTP Umum eRapor bukan dasar penyusunan soal.\nTP Umum hanya digunakan untuk:\npelaporan;\nmeringkas TP rinci;\nmembantu pembacaan hasil belajar pada eRapor.\n\nL. PRINSIP TP UMUM eRAPOR\nGunakan TP rinci yang terdapat dalam setiap Bab.\nPrinsip utama:\nSebisa mungkin 1 Bab = 1 TP Umum eRapor.\nHanya jika dalam satu Bab terdapat dua kompetensi utama yang benar-benar berbeda dan tidak dapat dirangkum dengan baik, diperbolehkan:\n1 Bab = maksimal 2 TP Umum.\nTP Umum harus:\nringkas;\ntetap mewakili kompetensi utama;\ntidak menjadi daftar panjang TP;\ntidak menambahkan kompetensi baru;\ntidak mengubah tingkat tuntutan TP;\nmudah dipahami dalam konteks pelaporan;\nmenggunakan bahasa yang efektif.\nJika batas karakter eRapor diberikan guru, patuhi batas tersebut.\nJika tidak diberikan, buat sesingkat mungkin tanpa kehilangan makna.\n\nM. CARA MERUMUSKAN TP UMUM\nJangan sekadar menggabungkan seluruh TP menggunakan kata “dan”.\nCari kompetensi payung.\nContoh:\nTP rinci:\nTP1.1 mengidentifikasi informasi dalam teks;\nTP1.2 menentukan gagasan utama;\nTP1.3 menganalisis pesan dalam teks.\nTP Umum jangan menjadi:\nMengidentifikasi informasi, menentukan gagasan utama, dan menganalisis pesan dalam teks.\nJika dapat diringkas lebih efektif, misalnya:\nMenganalisis informasi, gagasan, dan pesan dalam teks.\nNamun rumusan harus tetap benar-benar mewakili TP sumber.\n\nN. KODE TP UMUM eRAPOR\nGunakan kode:\nER1.1, ER2.1, ER3.1, dan seterusnya.\nContoh:\nER1.1 = TP Umum Bab 1.\nJika Bab 1 memerlukan dua TP Umum:\nER1.1\nER1.2\n\nOUTPUT 3 — TABEL TP UMUM eRAPOR\nBuat hanya tabel berikut:\nBab\nKode TP Umum eRapor\nRumusan TP Umum eRapor\nTP Rinci yang Diwadahi\nPada kolom TP Rinci yang Diwadahi, tuliskan:\nTP1.1 — [rumusan TP]\nTP1.2 — [rumusan TP]\nTP1.3 — [rumusan TP]\ndan seterusnya.\nPastikan seluruh TP rinci dalam Bab terwadahi.\nJangan memasukkan TP dari Bab berbeda dalam satu TP Umum.\n\nO. VALIDASI INTERNAL BLUEPRINT\nSebelum final, periksa:\nBlueprint\napakah jumlah soal sudah tepat;\napakah setiap soal memiliki TP;\napakah indikator benar-benar turun dari TP;\napakah distribusi soal proporsional;\napakah bentuk soal sesuai kemampuan;\napakah Bloom/DoK sesuai tuntutan;\napakah stimulus benar-benar diperlukan dan relevan.\nDistribusi\napakah jumlah LOTS/MOTS/HOTS sesuai;\napakah komposisi bentuk soal sesuai;\napakah semua TP penting terwakili;\napakah distribusi per Bab masuk akal.\nTP Umum eRapor\napakah sebisa mungkin 1 Bab hanya 1 TP Umum;\napakah seluruh TP rinci sudah terwadahi;\napakah TP Umum cukup ringkas;\napakah tidak ada kompetensi baru;\napakah tidak ada TP lintas Bab yang digabungkan.\nJika belum sesuai, revisi sebelum menghasilkan dokumen final.\n\nP. FORMAT DOKUMEN\nBuat 1 file Microsoft Word .docx.\nUrutan dokumen wajib:\n1. IDENTITAS ASESMEN\n2. BLUEPRINT/KISI-KISI ASESMEN SUMATIF\n3. REKAP DISTRIBUSI SOAL\n4. TP UMUM eRAPOR\nJangan menambahkan tabel CP–TP karena sudah tersedia pada dokumen Analisis CP–TP.\nGunakan:\nukuran A4;\norientasi landscape;\ntabel Word yang sebenarnya;\nheader tabel berulang jika lebih dari satu halaman;\nformat bersih dan mudah dibaca.\nNama file:\nBLUEPRINT_ASESMEN_SUMATIF_[Mata Pelajaran][Kelas][Semester].docx\nJANGAN membuat soal.\nJANGAN menampilkan proses analisis internal.\nLangsung hasilkan file Word final.\n",
+  "rules": [
+    {
+      "start": 748,
+      "end": 992,
+      "old": "Mata Pelajaran: BAHASA INDONESIA\nJenjang: SMP\nFase/Kelas: D/IX\nSemester: I (SATU)\nJenis Asesmen: Sumatif Akhir Semester \nJumlah Soal: 40\nKomposisi Bentuk Soal: 35 pilihan ganda + 5 isian singkat\nWaktu: 120 menit\nKonteks Lokal jika Diperlukan: -",
+      "value": "Mata Pelajaran: {{mapel}}\nJenjang: {{jenjang}}\nFase/Kelas: {{fase}}/{{kelas}}\nSemester: {{semester}}\nJenis Asesmen: {{jenisOutput}} \nJumlah Soal: {{jumlah}}\nKomposisi Bentuk Soal: {{komposisi}}\nWaktu: {{durasi}} menit\nKonteks Lokal jika Diperlukan: {{konteks}}"
+    },
+    {
+      "start": 1029,
+      "end": 1062,
+      "old": "LOTS: 50 %\nMOTS: 30 %\nHOTS: 20 %]",
+      "value": "LOTS: {{lotsOutput}}\nMOTS: {{motsOutput}}\nHOTS: {{hotsOutput}}]"
+    },
+    {
+      "start": 1471,
+      "end": 1491,
+      "old": "[ISI jika diketahui]",
+      "value": "{{batas}}"
+    },
+    {
+      "start": 2903,
+      "end": 3184,
+      "old": "Mata Pelajaran: [ISI]\nJenjang: [ISI]\nFase/Kelas: [ISI]\nSemester: [ISI]\nJenis Asesmen: [Sumatif Tengah Semester / Sumatif Akhir Semester / lainnya]\nJumlah Soal: [ISI]\nKomposisi Bentuk Soal: [contoh: 25 Pilihan Ganda + 5 Isian Singkat]\nWaktu: [ISI]\nKonteks Lokal: [ISI / tidak perlu]",
+      "value": "Mata Pelajaran: {{mapel}}\nJenjang: {{jenjang}}\nFase/Kelas: {{fase}}/{{kelas}}\nSemester: {{semester}}\nJenis Asesmen: {{jenisOutput}}\nJumlah Soal: {{jumlah}}\nKomposisi Bentuk Soal: {{komposisi}}\nWaktu: {{durasi}} menit\nKonteks Lokal: {{konteks}}"
+    },
+    {
+      "start": 3205,
+      "end": 3246,
+      "old": "LOTS: [ISI %]\nMOTS: [ISI %]\nHOTS: [ISI %]",
+      "value": "LOTS: {{lotsOutput}}\nMOTS: {{motsOutput}}\nHOTS: {{hotsOutput}}"
+    }
+  ],
+  "order": 11,
+  "version": 1,
+  "category": "perencanaan"
+}

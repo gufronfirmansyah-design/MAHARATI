@@ -1,0 +1,73 @@
+{
+  "id": "prota",
+  "title": "Program Tahunan",
+  "group": "Perencanaan",
+  "source": "4. PROTA.docx",
+  "description": "Susun seluruh modul dan rekap alokasi waktu selama satu tahun.",
+  "needs": [
+    "Pemetaan modul dan alokasi waktu final, termasuk pembagian semester."
+  ],
+  "fields": [
+    {
+      "id": "mapel",
+      "label": "Mata pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true,
+      "placeholder": "Contoh: Matematika"
+    },
+    {
+      "id": "sekolah",
+      "label": "Satuan pendidikan",
+      "type": "text",
+      "required": true,
+      "shared": true,
+      "placeholder": "Nama sekolah"
+    },
+    {
+      "id": "kelas",
+      "label": "Kelas",
+      "type": "text",
+      "required": true,
+      "shared": true,
+      "placeholder": "Contoh: VII"
+    },
+    {
+      "id": "fase",
+      "label": "Fase",
+      "type": "select",
+      "required": true,
+      "shared": true,
+      "options": ["Fondasi", "A", "B", "C", "D", "E", "F", "Tidak berlaku"]
+    },
+    {
+      "id": "tahun",
+      "label": "Tahun pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true,
+      "placeholder": "Contoh: 2026/2027"
+    },
+    {
+      "id": "jp",
+      "label": "JP per minggu",
+      "type": "number",
+      "required": true,
+      "shared": true,
+      "min": 1
+    }
+  ],
+  "note": "Naskah sumber memuat arahan membagi semester sekaligus larangan memindahkan modul. Siapkan pembagian semester final pada sumber.",
+  "original": "Selanjutnya buatkan Program Tahunan.\nBuat hasil akhir dalam satu file Microsoft Word .docx dengan ketentuan:\nukuran halaman A4;\norientasi landscape;\nmenggunakan tabel Word yang sebenarnya;\ntabel menyesuaikan lebar halaman;\ngunakan bahasa Indonesia formal, jelas, dan ringkas.\nDalam prompt ini, tanda | digunakan sebagai pemisah kolom tabel.\nContoh:\nSemester | Kode Modul | Judul Modul | Kode TP | Alokasi Waktu\nDalam file Word, ubah format tersebut menjadi tabel Word yang sebenarnya.\n==================================================\nA. PERAN DAN TUGAS\n==================================================\nKamu adalah Curriculum Planning Architect yang bertugas menyusun Program Tahunan berdasarkan hasil Pemetaan Modul dan Alokasi Waktu yang telah disahkan.\nTugas kamu adalah:\nmenampilkan seluruh modul selama satu tahun;\nmembagi modul ke Semester 1 dan Semester 2;\nmenampilkan Bab dan Lingkup Materi/Subbab;\nmenampilkan TP yang dicakup setiap modul;\nmenampilkan alokasi JP setiap modul;\nmenghitung total JP setiap semester dan satu tahun.\nJangan:\nmengubah kode modul;\nmengubah judul modul;\nmengubah kode atau rumusan TP;\nmengubah alokasi JP;\nmembuat modul baru;\nmenghapus atau menggabungkan modul;\nmemindahkan modul ke semester lain;\nmembagi modul ke bulan atau minggu;\nmenulis kegiatan pembelajaran;\nmembuat asesmen.\n==================================================\nB. ATURAN PENYUSUNAN\n==================================================\nGunakan seluruh modul yang telah disahkan.\nPisahkan modul berdasarkan Semester 1 dan Semester 2.\nUrutkan modul sesuai urutan ATP.\nGunakan satu baris untuk setiap modul.\nJika satu modul mencakup beberapa TP, tuliskan seluruh kode TP secara berurutan.\nAlokasi waktu ditulis dalam satuan JP.\nHitung total JP Semester 1.\nHitung total JP Semester 2.\nHitung total JP satu tahun.\nJangan membagi JP ke bulan atau minggu karena pembagian tersebut dilakukan dalam Promes.\n==================================================\nE. STRUKTUR OUTPUT\n==================================================\nTuliskan judul:\nPROGRAM TAHUNAN\nKemudian tampilkan identitas:\nMata Pelajaran:\nSatuan Pendidikan:\nKelas/Fase:\nTahun Pelajaran:\nAlokasi Waktu: ... JP/Minggu\nTabel Program Tahunan\nFormat:\nSemester 1\nNo. | Kode Modul | Lingkup Materi/Subbab | Kode TP yang Dicakup | Alokasi Waktu\n\nSemester 2\nNo. | Kode Modul | Lingkup Materi/Subbab | Kode TP yang Dicakup | Alokasi Waktu\n\nKetentuan:\nBuat satu baris untuk setiap modul.\nGunakan kode modul dan kode TP persis seperti data sumber.\nJangan menuliskan uraian kegiatan pembelajaran.\nJangan menambahkan bulan, minggu, atau tanggal.\n\nRekapitulasi\nFormat:\nKomponen | Semester 1 | Semester 2 | Total Satu Tahun\nKomponen yang ditampilkan:\nJumlah Bab\nJumlah Modul\nJumlah TP\nTotal Alokasi JP\nPastikan:\nTotal JP Satu Tahun = Total JP Semester 1 + Total JP Semester 2\n==================================================\nF. PEMERIKSAAN AKHIR\n==================================================\nPastikan:\nseluruh modul telah dimasukkan;\ntidak ada modul baru;\ntidak ada modul yang dihapus;\nkode modul tidak berubah;\njudul modul tidak berubah;\nkode TP tidak berubah;\nalokasi JP sesuai dokumen sebelumnya;\npembagian semester tidak berubah;\ntotal JP dihitung dengan benar;\noutput hanya memuat identitas, tabel Prota, dan rekapitulasi.\nGunakan nama file:\nPROTA_[Mata Pelajaran][Kelas][Satuan Pendidikan]_[Tahun Pelajaran].docx\nBerikan file Word hasil akhir setelah selesai.\nFormat ini sudah menyesuaikan contoh lama: bagian Kompetensi Dasar diganti menjadi Modul, Bab, Subbab, dan TP, sedangkan fungsi utamanya tetap sama, yaitu menampilkan distribusi program dan alokasi waktu Semester 1 serta Semester 2 selama satu tahun.\n",
+  "rules": [
+    {
+      "start": 2088,
+      "end": 2180,
+      "old": "Mata Pelajaran:\nSatuan Pendidikan:\nKelas/Fase:\nTahun Pelajaran:\nAlokasi Waktu: ... JP/Minggu",
+      "value": "Mata Pelajaran: {{mapel}}\nSatuan Pendidikan: {{sekolah}}\nKelas/Fase: {{kelas}}/{{fase}}\nTahun Pelajaran: {{tahun}}\nAlokasi Waktu: {{jp}} JP/Minggu"
+    }
+  ],
+  "order": 4,
+  "version": 1,
+  "category": "perencanaan"
+}

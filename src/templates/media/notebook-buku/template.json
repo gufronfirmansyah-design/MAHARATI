@@ -1,0 +1,100 @@
+{
+  "id": "notebook-buku",
+  "title": "NotebookLM — Slide dari Buku",
+  "version": 1,
+  "category": "media",
+  "group": "Media & Kreasi",
+  "order": 21,
+  "description": "Ubah bagian buku yang dipilih menjadi materi presentasi.",
+  "source": "Contoh prompt slide sumber buku dari pengguna; contoh bab dan desain dijadikan isian.",
+  "needs": [
+    "Buku yang memuat bab/subbab pilihan sebagai sumber aktif di NotebookLM."
+  ],
+  "note": "",
+  "fields": [
+    {
+      "id": "bab",
+      "label": "Bab dan subbab yang dipilih",
+      "type": "textarea",
+      "required": true,
+      "shared": false
+    },
+    {
+      "id": "tema",
+      "label": "Tema visual",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "3D Glass",
+        "Flat illustration",
+        "Minimalis",
+        "Kolase kertas",
+        "Isometrik"
+      ]
+    },
+    {
+      "id": "warna",
+      "label": "Palet warna",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Pastel lembut",
+        "Biru dan putih",
+        "Warna bumi",
+        "Kontras tinggi"
+      ]
+    },
+    {
+      "id": "layout",
+      "label": "Gaya layout",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Modern, clean, educational",
+        "Minimalis dengan ruang kosong",
+        "Infografis edukatif"
+      ]
+    },
+    {
+      "id": "karakter",
+      "label": "Karakter guru",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Guru perempuan 3D, seragam Pemda khaki, berjilbab, rok panjang, berkacamata",
+        "Guru laki-laki 3D, seragam khaki, berkacamata",
+        "Guru perempuan 2D dengan busana profesional",
+        "Tanpa karakter"
+      ]
+    },
+    {
+      "id": "latar",
+      "label": "Latar belakang",
+      "type": "combo",
+      "required": true,
+      "shared": false,
+      "options": [
+        "Terang",
+        "Putih bersih",
+        "Pastel gradasi",
+        "Gelap berkontras tinggi"
+      ]
+    }
+  ],
+  "format": "authored",
+  "original": "",
+  "rules": [],
+  "body": "Saya ingin membuat materi presentasi untuk {{bab}}.\nTolong ekstrak isinya dari buku dengan aturan:\nDilarang mengarang, menambah, atau mengubah redaksi asli buku (copy-paste apa adanya).\nSusun dalam poin-poin yang mudah dipahami untuk slide.\nTampilkan materi secara sistematis.\n\nAturan Desain:\n- Tema: {{tema}}\n- Palet Warna: {{warna}}\n- Gaya Layout: {{layout}}\n- Latar: {{latar}}\n\nKetentuan Karakter: {{karakter}}. Jika memakai karakter, sertakan visual karakter guru sedang menjelaskan di setiap slide tanpa menutupi teks. Jika memilih tanpa karakter, jangan menambahkan karakter guru.",
+  "example": {
+    "bab": "BAB 2 Belajar Berpantun\nA. Menemukan Ciri-Ciri Pantun\nB. Penggunaan Pantun dalam Kehidupan Sehari-hari",
+    "tema": "3D Glass",
+    "warna": "Pastel lembut",
+    "layout": "Modern, clean, educational",
+    "karakter": "Guru perempuan 3D, seragam Pemda khaki, berjilbab, rok panjang, berkacamata",
+    "latar": "Terang"
+  }
+}

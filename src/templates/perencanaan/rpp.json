@@ -1,0 +1,418 @@
+{
+  "id": "rpp",
+  "title": "Modul Ajar / RPP",
+  "group": "Pembelajaran",
+  "source": "5 MODUL AJAR-ADA ISIAN.docx",
+  "description": "Susun satu modul operasional berdasarkan data kendali yang sudah dipilih.",
+  "needs": [
+    "Template RPP (unduh di bawah).",
+    "Data kendali modul, gambaran aktivitas dan gambaran asesmen final.",
+    "Buku/BSE sumber."
+  ],
+  "fields": [
+    {
+      "id": "mapel",
+      "label": "Mata pelajaran",
+      "type": "text",
+      "required": true,
+      "shared": true,
+      "placeholder": "Contoh: Matematika"
+    },
+    {
+      "id": "fase",
+      "label": "Fase",
+      "type": "select",
+      "required": true,
+      "shared": true,
+      "options": ["Fondasi", "A", "B", "C", "D", "E", "F", "Tidak berlaku"]
+    },
+    {
+      "id": "kelas",
+      "label": "Kelas",
+      "type": "text",
+      "required": true,
+      "shared": true,
+      "placeholder": "Contoh: VII"
+    },
+    {
+      "id": "modul",
+      "label": "Nama modul",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "bab",
+      "label": "Nama bab",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lingkup",
+      "label": "Lingkup materi / subbab",
+      "type": "textarea",
+      "required": true,
+      "help": ""
+    },
+    {
+      "id": "tp",
+      "label": "Tujuan pembelajaran",
+      "type": "textarea",
+      "required": true,
+      "help": "Tempel kode dan rumusan TP final secara lengkap."
+    },
+    {
+      "id": "alokasi",
+      "label": "Alokasi waktu modul (JP)",
+      "type": "number",
+      "required": true,
+      "min": 1
+    },
+    {
+      "id": "pertemuan",
+      "label": "Jumlah pertemuan",
+      "type": "number",
+      "required": true,
+      "min": 1
+    },
+    {
+      "id": "jpsesi",
+      "label": "JP per pertemuan",
+      "type": "text",
+      "required": true,
+      "placeholder": "Contoh: 2 JP atau 3 JP"
+    },
+    {
+      "id": "dimensions",
+      "label": "Dimensi dan subdimensi pilihan",
+      "type": "dimensions",
+      "required": true,
+      "groups": [
+        {
+          "label": "1. Dimensi Keimanan dan Ketakwaan terhadap Tuhan Yang Maha Esa",
+          "header": "1. Dimensi Keimanan dan Ketakwaan terhadap Tuhan Yang Maha Esa\nNo\nSubdimensi\nBerkembang\nCakap\nMahir",
+          "items": [
+            {
+              "id": "dim-63",
+              "label": "Hubungan dengan Tuhan Yang Maha Esa",
+              "text": "1\nHubungan dengan Tuhan Yang Maha Esa\nMemahami dan mengamalkan ajaran Tuhan Yang Maha Esa yang dianutnya belum berdasarkan kesadaran diri atau masih berdasarkan perintah orang lain.\nMemahami dan mengamalkan ajaran Tuhan Yang Maha Esa lebih mendalam berdasarkan kesadaran diri secara konsisten dan mampu mengajak orang lain dalam kehidupan sehari-hari.\nMemahami dan mengamalkan ajaran Tuhan Yang Maha Esa yang dianutnya berdasarkan kesadaran dirinya secara konsisten."
+            },
+            {
+              "id": "dim-68",
+              "label": "Hubungan dengan sesama Manusia",
+              "text": "2\nHubungan dengan sesama Manusia\nMenunjukkan perilaku akhlak mulia dalam kehidupan sosial dengan saling menghormati dan berintegritas namun belum konsisten.\nMenunjukkan perilaku akhlak mulia dengan mengembangkan sikap kasih sayang, kejujuran, keadilan, dan tanggung jawab secara konsisten dalam kehidupan pribadi dan sosial.\nMenunjukkan perilaku akhlak mulia dengan mengembangkan sikap kasih sayang, kejujuran, keadilan, dan tanggung jawab secara konsisten dalam kehidupan pribadi dan sosial serta mampu mengajak orang lain."
+            },
+            {
+              "id": "dim-73",
+              "label": "Hubungan dengan Lingkungan Alam",
+              "text": "3\nHubungan dengan Lingkungan Alam\nMemiliki kesadaran untuk menjaga keseimbangan dan kelestarian lingkungan alam sesuai dengan pengetahuan yang dimilikinya.\nMenjaga keseimbangan dan kelestarian lingkungan alam dengan menggunakan pengetahuan yang dimilikinya.\nMenjaga keseimbangan dan kelestarian lingkungan alam dengan menggunakan pengetahuan yang dimilikinya bersama-sama dengan orang lain."
+            }
+          ]
+        },
+        {
+          "label": "2. Dimensi Kewargaan",
+          "header": "2. Dimensi Kewargaan\nNo\nSubdimensi\nBerkembang\nCakap\nMahir",
+          "items": [
+            {
+              "id": "dim-84",
+              "label": "Kewargaan Lokal",
+              "text": "1\nKewargaan Lokal\nMenunjukkan kesadaran atas aturan, norma, dan nilai sosial budaya yang berlaku di masyarakatnya.\nBerperilaku sesuai aturan, norma, dan nilai sosial budaya yang berlaku di masyarakat sekitarnya dengan bimbingan.\nBerperilaku sesuai aturan, norma, dan nilai sosial budaya yang berlaku di masyarakatnya dan mampu mengajak orang lain untuk melakukan hal yang sama secara mandiri."
+            },
+            {
+              "id": "dim-89",
+              "label": "Kewargaan Nasional",
+              "text": "2\nKewargaan Nasional\nMemiliki ketertarikan dalam menghargai keragaman masyarakat, budaya nasional untuk menguatkan wawasan kebangsaan.\nBerperilaku sesuai aturan, norma, dan nilai sosial budaya yang berlaku di lingkup nasional dan menghargai keberagaman budayanya, serta berinisiatif menjaga Negara Kesatuan Republik Indonesia (NKRI).\nBerperilaku sesuai aturan, norma, dan nilai sosial budaya yang berlaku di lingkup nasional dan berinisiatif untuk menjaga NKRI, serta mampu mengajak orang lain melakukan hal yang sama."
+            },
+            {
+              "id": "dim-94",
+              "label": "Kewargaan Global",
+              "text": "3\nKewargaan Global\nMemiliki ketertarikan dalam menghargai keragaman masyarakat, budaya global untuk menguatkan wawasan kebangsaan.\nBerperilaku sesuai aturan, norma, dan nilai sosial budaya yang berlaku di lingkup global dan menghargai keberagamannya dengan tetap menjaga identitas diri dan budaya nasional.\nBerperilaku sesuai aturan, norma, dan nilai sosial budaya yang berlaku di lingkup global dan menghargai keberagamannya dengan tetap menjaga identitas diri dan budaya nasional, serta mampu mengajak orang lain melakukan yang sama."
+            }
+          ]
+        },
+        {
+          "label": "3. Dimensi Penalaran Kritis",
+          "header": "3. Dimensi Penalaran Kritis\nNo\nSubdimensi\nBerkembang\nCakap\nMahir",
+          "items": [
+            {
+              "id": "dim-105",
+              "label": "Penyampaian Argumentasi",
+              "text": "1\nPenyampaian Argumentasi\nMenyampaikan argumen logis secara runtut disertai alasan sederhana.\nMenyampaikan argumen logis secara runtut disertai alasan yang kuat.\nMenyampaikan argumen yang logis secara runtut, didukung data dan bukti kuat yang relevan, dan mampu menghargai dan menanggapi argumen orang lain."
+            },
+            {
+              "id": "dim-110",
+              "label": "Pengambilan Keputusan",
+              "text": "2\nPengambilan Keputusan\nMembuat keputusan secara logis dengan membandingkan beberapa pendapat/sudut pandang serta beberapa informasi yang relevan dengan bimbingan.\nMembuat keputusan secara logis dengan membandingkan beberapa pendapat/sudut pandang serta beberapa informasi yang relevan secara mandiri.\nMembuat keputusan secara logis dengan membandingkan beberapa pendapat/sudut pandang serta beberapa informasi yang relevan secara mandiri serta mempertimbangkan dampak yang ditimbulkan."
+            },
+            {
+              "id": "dim-115",
+              "label": "Penyelesaian Masalah",
+              "text": "3\nPenyelesaian Masalah\nMenyelesaikan masalah sederhana menghasilkan solusi logis dan kontekstual namun kurang tepat.\nMenyelesaikan masalah sederhana dan menghasilkan solusi logis dan kontekstual yang tepat dengan bimbingan.\nMenyelesaikan masalah sederhana dan menghasilkan solusi logis dan kontekstual yang tepat secara mandiri."
+            }
+          ]
+        },
+        {
+          "label": "4. Dimensi Kreativitas",
+          "header": "4. Dimensi Kreativitas\nNo\nSubdimensi\nBerkembang\nCakap\nMahir",
+          "items": [
+            {
+              "id": "dim-126",
+              "label": "Gagasan baru",
+              "text": "1\nGagasan baru\nMenyampaikan gagasan inovatif dari contoh atau referensi yang diberikan.\nMengembangkan gagasan inovatif untuk menyelesaikan masalah sekitar.\nMengembangkan beberapa gagasan inovatif untuk menyelesaikan masalah di lingkungan yang lebih luas."
+            },
+            {
+              "id": "dim-131",
+              "label": "Fleksibilitas berpikir",
+              "text": "2\nFleksibilitas berpikir\nMenemukan solusi masalah di lingkungan sekitar.\nMenemukan beberapa alternatif solusi masalah di lingkungan sekitar dan memberikan umpan balik.\nMenemukan beberapa alternatif solusi masalah di lingkungan sekitar dan mengevaluasi alternatif solusinya."
+            },
+            {
+              "id": "dim-136",
+              "label": "Karya",
+              "text": "3\nKarya\nMenciptakan tindakan dan/atau karya kreatif serta dapat mengidentifikasi dampaknya bagi dirinya.\nMenciptakan tindakan dan/atau karya kreatif yang kompleks serta dapat menganalisis dampaknya bagi dirinya dan orang lain.\nMenciptakan tindakan dan/atau karya kreatif yang kompleks serta dapat mengevaluasi dampaknya bagi orang lain dan lingkungan sekitarnya."
+            }
+          ]
+        },
+        {
+          "label": "5. Dimensi Kolaborasi",
+          "header": "5. Dimensi Kolaborasi\nNo\nSubdimensi\nBerkembang\nCakap\nMahir",
+          "items": [
+            {
+              "id": "dim-147",
+              "label": "Peduli",
+              "text": "1\nPeduli\nMenunjukkan kepedulian untuk berkolaborasi namun belum konsisten.\nMenunjukkan kepedulian secara konsisten untuk berkolaborasi.\nMengajak teman untuk peduli berkolaborasi."
+            },
+            {
+              "id": "dim-152",
+              "label": "Berbagi",
+              "text": "2\nBerbagi\nSaling berkontribusi dalam pemanfaatan bersama sumber daya, pengetahuan, dan gagasan untuk tujuan saling memberdayakan namun belum konsisten.\nSaling berkontribusi dalam pemanfaatan bersama sumber daya, pengetahuan, dan gagasan untuk tujuan saling memberdayakan.\nMengambil inisiatif untuk saling berkontribusi dalam pemanfaatan bersama sumber daya, pengetahuan, dan gagasan untuk tujuan saling memberdayakan."
+            },
+            {
+              "id": "dim-157",
+              "label": "Kerja sama",
+              "text": "3\nKerja sama\nBekerjasama dengan berbagai pihak dari dalam satuan pendidikan untuk peningkatan kualitas bersama namun belum konsisten.\nBekerjasama dengan berbagai pihak dari dalam satuan pendidikan untuk peningkatan kualitas bersama secara konsisten.\nMengambil inisiatif untuk bekerjasama dengan berbagai pihak dari dalam dan luar satuan pendidikan untuk peningkatan kualitas bersama."
+            }
+          ]
+        },
+        {
+          "label": "6. Dimensi Kemandirian",
+          "header": "6. Dimensi Kemandirian\nNo\nSubdimensi\nBerkembang\nCakap\nMahir",
+          "items": [
+            {
+              "id": "dim-168",
+              "label": "Bertanggung Jawab",
+              "text": "1\nBertanggung Jawab\nMenetapkan target pembelajaran dan melakukan upaya untuk mencapainya dengan bimbingan penuh.\nMenetapkan target pembelajaran dan melakukan upaya untuk mencapainya dengan bimbingan.\nMenetapkan target pembelajaran dan melakukan upaya untuk mencapainya dengan bimbingan minimal."
+            },
+            {
+              "id": "dim-173",
+              "label": "Kepemimpinan",
+              "text": "2\nKepemimpinan\nMemotivasi dan meregulasi diri sendiri dalam mencapai target yang ditetapkan dengan bimbingan penuh.\nMemotivasi dan meregulasi diri sendiri dalam mencapai target yang ditetapkan dengan bimbingan.\nMemotivasi dan mengorganisasi teman sebaya untuk mencapai target yang ditetapkan bersama secara tuntas dengan bimbingan minimal."
+            },
+            {
+              "id": "dim-178",
+              "label": "Pengembangan Diri",
+              "text": "3\nPengembangan Diri\nMengidentifikasi potensi dan bakat diri, menyusun rencana pengembangan diri untuk mewujudkan cita-cita dengan bimbingan penuh.\nMengidentifikasi potensi dan bakat diri, menyusun dan mengaktualisasi rencana pengembangan diri untuk mewujudkan cita-cita dengan bimbingan.\nMengaktualisasi rencana pengembangan diri untuk mewujudkan cita-cita serta mampu beradaptasi dengan perubahan dan menghadapi tantangan dengan bimbingan minimal."
+            }
+          ]
+        },
+        {
+          "label": "7. Dimensi Kesehatan",
+          "header": "7. Dimensi Kesehatan\nNo\nSubdimensi\nBerkembang\nCakap\nMahir",
+          "items": [
+            {
+              "id": "dim-189",
+              "label": "Hidup bersih dan sehat",
+              "text": "1\nHidup bersih dan sehat\nMenjaga kebersihan diri dan keluarga untuk meraih kesehatan namun belum konsisten.\nMenjaga kebersihan diri dan keluarga untuk meraih kesehatan secara konsisten.\nMengajak orang lain untuk bersama-sama menjaga kebersihan diri dan keluarga guna meraih kesehatan yang prima."
+            },
+            {
+              "id": "dim-194",
+              "label": "Kebugaran, kesehatan fisik, dan kesehatan mental",
+              "text": "2\nKebugaran, kesehatan fisik, dan kesehatan mental\nMeningkatkan kebugaran, kesehatan fisik, dan kesehatan mental dengan berolahraga secara teratur, menerapkan pola makan sehat dan bergizi seimbang, mencegah dan mengatasi stress, serta mengendalikan emosi dengan bimbingan penuh.\nMeningkatkan kebugaran, kesehatan fisik, dan kesehatan mental dengan berolahraga secara teratur, menerapkan pola makan sehat dan bergizi seimbang, mencegah dan mengatasi stress, serta mengendalikan emosi dengan bimbingan.\nMengajak orang lain agar meningkatkan kebugaran, kesehatan fisik, dan kesehatan mental dengan berolahraga secara teratur, menerapkan pola makan sehat dan bergizi seimbang, mencegah dan mengatasi stress, serta mengendalikan emosi dengan bimbingan minimal."
+            },
+            {
+              "id": "dim-199",
+              "label": "Kesehatan lingkungan",
+              "text": "3\nKesehatan lingkungan\nBerperan aktif meningkatkan kesehatan lingkungan rumah dan sekolah.\nBerperan aktif meningkatkan kesehatan lingkungan rumah, sekolah, dan masyarakat luas.\nMengajak orang lain untuk meningkatkan kesehatan lingkungan rumah, sekolah, dan masyarakat luas."
+            }
+          ]
+        },
+        {
+          "label": "8. Dimensi Komunikasi",
+          "header": "8. Dimensi Komunikasi\nNo\nSubdimensi\nBerkembang\nCakap\nMahir",
+          "items": [
+            {
+              "id": "dim-210",
+              "label": "Menyimak",
+              "text": "1\nMenyimak\nMendengarkan secara aktif sejumlah teks lisan yang dipilih untuk mendapatkan informasi eksplisit dan implisit.\nMendengarkan secara aktif sejumlah teks lisan yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan yang relevan.\nMendengarkan secara aktif sejumlah teks lisan yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan relevan dan kritis."
+            },
+            {
+              "id": "dim-215",
+              "label": "Berbicara",
+              "text": "2\nBerbicara\nMenyampaikan, menggali, dan menanggapi secara lisan berbagai jenis informasi namun belum tepat dan lancar.\nMenyampaikan, menggali, dan menanggapi secara lisan berbagai jenis informasi dengan cara yang cukup tepat, lancar, dan efektif.\nMenyampaikan, menggali, dan menanggapi secara lisan berbagai jenis informasi dengan cara yang benar, tepat, lancar, dan efektif."
+            },
+            {
+              "id": "dim-220",
+              "label": "Membaca",
+              "text": "3\nMembaca\nMembaca secara aktif sejumlah teks tertulis yang dipilih untuk mendapatkan informasi eksplisit dan implisit.\nMembaca secara aktif sejumlah teks tertulis yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan yang relevan.\nMembaca secara aktif sejumlah teks tertulis yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan relevan dan kritis."
+            },
+            {
+              "id": "dim-225",
+              "label": "Menulis",
+              "text": "4\nMenulis\nMenyampaikan, menggali, dan menanggapi informasi secara tertulis dengan beberapa jenis teks terpilih namun belum tepat dan lancar.\nMenyampaikan, menggali, dan menanggapi informasi secara tertulis dengan beberapa jenis teks terpilih dengan cara yang cukup tepat, lancar, dan efektif.\nMenyampaikan, menggali, dan menanggapi informasi secara tertulis dengan beberapa jenis teks terpilih dengan cara yang benar, tepat, lancar, dan efektif."
+            }
+          ]
+        }
+      ],
+      "help": "Pilih subdimensi yang ingin dikuatkan. Deskripsi perkembangan disalin dari dokumen referensi Bapak."
+    },
+    {
+      "id": "pedagogis",
+      "label": "Praktik pedagogis",
+      "type": "textarea",
+      "required": true,
+      "help": ""
+    },
+    {
+      "id": "mitra",
+      "label": "Kemitraan pembelajaran",
+      "type": "textarea",
+      "required": true,
+      "help": "Jika tidak diperlukan, tuliskan “Tidak memerlukan kemitraan khusus”."
+    },
+    {
+      "id": "lingkungan",
+      "label": "Lingkungan pembelajaran",
+      "type": "textarea",
+      "required": true,
+      "help": ""
+    },
+    {
+      "id": "digital",
+      "label": "Pemanfaatan digital",
+      "type": "textarea",
+      "required": true,
+      "help": "Jika tidak diperlukan, tuliskan “Tidak diperlukan”."
+    },
+    {
+      "id": "aktivitas",
+      "label": "Gambaran aktivitas",
+      "type": "textarea",
+      "required": true,
+      "help": "Tempel bagian Memahami, Mengaplikasi, dan Merefleksi dari hasil sebelumnya."
+    },
+    {
+      "id": "asesmen",
+      "label": "Gambaran asesmen",
+      "type": "textarea",
+      "required": true,
+      "help": "Tempel asesmen awal, proses, dan akhir dari hasil sebelumnya."
+    }
+  ],
+  "note": "Template RPP asli memuat fase D dan contoh durasi 40 menit. Periksa penyesuaiannya untuk jenjang Anda pada hasil AI; berkas sumber tetap dipertahankan.",
+  "original": "\n\nKamu adalah Learning Design Architect dan Guru Praktisi yang memahami perencanaan pembelajaran, Pembelajaran Mendalam, asesmen pembelajaran, diferensiasi, serta karakteristik mata pelajaran dan jenjang yang sedang dikembangkan.\nTugasmu adalah menyusun 1 Modul Ajar/RPP yang siap digunakan guru untuk melaksanakan pembelajaran, bukan sekadar memenuhi administrasi.\nModul harus:\noperasional;\nrealistis;\nkontekstual;\nberpusat pada murid;\nselaras dengan Tujuan Pembelajaran;\nsesuai karakteristik mata pelajaran;\nmenerapkan Pembelajaran Mendalam;\nmemiliki alur antarpertemuan yang jelas;\nmenggunakan asesmen yang telah direncanakan;\nmenunjukkan apa yang dilakukan murid dan guru;\nmenunjukkan bukti belajar, umpan balik, scaffolding, dan tindak lanjut.\nPrinsip utama:\nMurid adalah pelaku utama pembelajaran. Guru berperan sebagai perancang, fasilitator, pemberi scaffolding, pengarah, pengamat, dan pemberi umpan balik.\nLangkah pembelajaran harus menggambarkan interaksi guru–murid secara konkret, bukan hanya daftar aktivitas.\n\nA. TEMPLATE\nSaya melampirkan template Modul Ajar/RPP.\nGunakan template tersebut sebagai MASTER FORMAT DOKUMEN.\nWajib:\nmempertahankan struktur template;\nmempertahankan urutan bagian;\nmempertahankan heading;\nmempertahankan tabel;\nmempertahankan format dasar;\nmengisi bagian yang tersedia sesuai kebutuhan modul.\nJangan:\nmendesain ulang template;\nmembuat template baru;\nmenghapus bagian template;\nmengubah urutan utama;\nmenambahkan banyak bagian baru yang tidak diperlukan.\nTemplate menentukan bentuk dokumen. Prompt ini menentukan kualitas isinya.\n\nB. DATA KENDALI MODUL\nGunakan data berikut sebagai DATA KENDALI UTAMA.\nKomponen\nData Kendali\nMata Pelajaran\nBahasa Indonesia\nFase/Kelas\nD/IX\nNama Modul\nPemahaman Puisi Rakyat (Pantun)\nNama Bab\nBab II Belajar Berpantun\nLingkup Materi\nMenemukan Ciri-Ciri Pantun\nPenggunaan Pantun dalam Kehidupan Sehari-hari\nTujuan Pembelajaran (TP)\nTP2.1 — Peserta didik mampu menganalisis unsur intrinsik dan ciri-ciri teks puisi rakyat (pantun) yang didengarkan.\n\nTP2.2 — Peserta didik mampu menganalisis makna tersurat dan tersirat serta menginterpretasi ungkapan kepedulian dari teks pantun, syair, dan gurindam yang dibaca.\nAlokasi Waktu Modul\n20 JP\nJumlah Pertemuan\n8 Pertemuan\nJumlah JP per Pertemuan\n2 JP atau 3 JP\nDimensi Profil Lulusan Pilihan\n3. Dimensi Penalaran Kritis\nNo\nSubdimensi\nBerkembang\nCakap\nMahir\n1\nPenyampaian Argumentasi\nMenyampaikan argumen logis secara runtut disertai alasan sederhana.\nMenyampaikan argumen logis secara runtut disertai alasan yang kuat.\nMenyampaikan argumen yang logis secara runtut, didukung data dan bukti kuat yang relevan, dan mampu menghargai dan menanggapi argumen orang lain.\n2\nPengambilan Keputusan\nMembuat keputusan secara logis dengan membandingkan beberapa pendapat/sudut pandang serta beberapa informasi yang relevan dengan bimbingan.\nMembuat keputusan secara logis dengan membandingkan beberapa pendapat/sudut pandang serta beberapa informasi yang relevan secara mandiri.\nMembuat keputusan secara logis dengan membandingkan beberapa pendapat/sudut pandang serta beberapa informasi yang relevan secara mandiri serta mempertimbangkan dampak yang ditimbulkan.\n3\nPenyelesaian Masalah\nMenyelesaikan masalah sederhana menghasilkan solusi logis dan kontekstual namun kurang tepat.\nMenyelesaikan masalah sederhana dan menghasilkan solusi logis dan kontekstual yang tepat dengan bimbingan.\nMenyelesaikan masalah sederhana dan menghasilkan solusi logis dan kontekstual yang tepat secara mandiri.\n\n8. Dimensi Komunikasi\nNo\nSubdimensi\nBerkembang\nCakap\nMahir\n1\nMenyimak\nMendengarkan secara aktif sejumlah teks lisan yang dipilih untuk mendapatkan informasi eksplisit dan implisit.\nMendengarkan secara aktif sejumlah teks lisan yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan yang relevan.\nMendengarkan secara aktif sejumlah teks lisan yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan relevan dan kritis.\n2\nBerbicara\nMenyampaikan, menggali, dan menanggapi secara lisan berbagai jenis informasi namun belum tepat dan lancar.\nMenyampaikan, menggali, dan menanggapi secara lisan berbagai jenis informasi dengan cara yang cukup tepat, lancar, dan efektif.\nMenyampaikan, menggali, dan menanggapi secara lisan berbagai jenis informasi dengan cara yang benar, tepat, lancar, dan efektif.\n3\nMembaca\nMembaca secara aktif sejumlah teks tertulis yang dipilih untuk mendapatkan informasi eksplisit dan implisit.\nMembaca secara aktif sejumlah teks tertulis yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan yang relevan.\nMembaca secara aktif sejumlah teks tertulis yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan relevan dan kritis.\n4\nMenulis\nMenyampaikan, menggali, dan menanggapi informasi secara tertulis dengan beberapa jenis teks terpilih namun belum tepat dan lancar.\nMenyampaikan, menggali, dan menanggapi informasi secara tertulis dengan beberapa jenis teks terpilih dengan cara yang cukup tepat, lancar, dan efektif.\nMenyampaikan, menggali, dan menanggapi informasi secara tertulis dengan beberapa jenis teks terpilih dengan cara yang benar, tepat, lancar, dan efektif.\n\nPraktik Pedagogis\nPembelajaran Berbasis Teks, Pembelajaran Kontekstual.\n\nKemitraan Pembelajaran\nTidak memerlukan kemitraan khusus (antarmurid dalam diskusi kelompok).\n\nLingkungan Pembelajaran\nRuang kelas \n\nPemanfaatan Digital\nPemutar audio untuk memperdengarkan contoh pantun lisan (opsional).\n\nGambaran Aktivitas\n1. Memahami\nMurid menyimak pembacaan pantun oleh guru atau dari media audio, kemudian mengidentifikasi ciri-ciri fisik (jumlah baris, suku kata, rima) dan unsur intrinsik (sampiran dan isi). Murid berlatih membedakan bentuk pantun dengan puisi rakyat lainnya. Bukti belajar: Catatan identifikasi ciri dan unsur intrinsik pantun.\n2. Mengaplikasi\nMurid membaca teks kumpulan pantun, syair, dan gurindam. Murid secara berkelompok menganalisis dan menginterpretasi makna tersurat dan pesan moral (tersirat) berupa ungkapan kepedulian yang terkandung dalam karya-karya tersebut. Bukti belajar: Tabel perbandingan ciri dan makna (pesan/ungkapan kepedulian) dari pantun, syair, dan gurindam.\n3. Merefleksi\nMurid mengidentifikasi kesulitan dalam menafsirkan kata-kata kiasan kuno khas puisi rakyat. Murid menyimpulkan daya tarik dan relevansi pesan moral (syair, pantun, gurindam) jika diterapkan pada komunikasi anak muda di era saat ini.\n\nGambaran Asesmen\n1. Asesmen Awal\nTujuan:\nMengetahui ingatan dan pemahaman prasyarat murid mengenai pola rima dan persajakan dasar.\nBentuk/teknik:\nKuis lisan (melengkapi baris).\nGambaran asesmen:\nGuru membacakan 2 baris sampiran, murid diminta secara acak menebak atau menyahut dengan baris isi yang rimanya sesuai.\nInformasi yang diperoleh dan tindak lanjut:\nMurid yang sudah terbiasa dengan rima a-b-a-b dapat diarahkan untuk langsung mengeksplorasi syair dan gurindam, sementara yang belum akan dibimbing lebih lanjut tentang suku kata dan rima pantun.\n2. Asesmen pada Proses Pembelajaran\nTP yang dipantau: TP2.1\nBukti belajar: Catatan identifikasi ciri dan unsur intrinsik pantun.\nTeknik: Penugasan (lembar kerja analisis).\nInstrumen yang diperlukan: Kunci jawaban / Lembar tugas.\nUmpan balik/tindak lanjut: Memastikan pemahaman konseptual (mana sampiran, mana isi) sudah tuntas sebelum berpindah ke analisis makna yang lebih dalam.\n3. Asesmen Akhir Pembelajaran\nTP yang diukur: TP2.2\nBukti ketercapaian utama:\nTabel perbandingan ciri dan makna (pesan/ungkapan kepedulian) dari pantun, syair, dan gurindam.\nBentuk/teknik asesmen:\nPenugasan tertulis (Tabel Analisis).\nInstrumen yang diperlukan:\nPedoman penskoran kesesuaian interpretasi.\nIndividu/Kelompok:\nKelompok, disertai konfirmasi lisan dari guru secara acak untuk membuktikan pemahaman individu tiap anggota.\n\n\n\n\nModel Pembelajaran Utama/Praktik Pedagogis\nJika guru sudah menentukan model pembelajaran, gunakan model tersebut dan jangan menggantinya.\nJika ditulis AI SESUAIKAN, pilih satu model pembelajaran utama yang paling sesuai dengan:\nTP;\nGambaran Aktivitas;\nkarakteristik materi;\njumlah pertemuan;\npraktik pedagogis yang telah ditentukan.\nJangan memilih model hanya karena populer.\nModel harus benar-benar membantu mewujudkan aktivitas yang sudah dirancang.\n\nC. ATURAN DATA\nData Kendali Modul adalah sumber kebenaran utama.\nJangan:\nmengubah kode atau rumusan TP;\nmembuat TP baru;\nmenghapus TP;\nmengubah pembagian modul;\nmengubah jumlah pertemuan;\nmengubah JP;\nmengubah Gambaran Aktivitas menjadi kegiatan yang berbeda;\nmengubah Gambaran Asesmen;\nmengarang fasilitas;\nmengarang alat atau bahan khusus;\nmengarang aplikasi;\nmengarang kondisi sekolah;\nmengarang mitra atau lokasi.\nGunakan file sumber/BSE sebelumnya jika masih tersedia sebagai referensi materi, contoh, teks, konteks, dan aktivitas, tetapi jangan menggunakannya untuk mengubah Data Kendali.\nJika terdapat pertentangan data, Data Kendali Modul menjadi acuan utama.\nJika informasi tidak tersedia, gunakan keputusan pedagogis yang sederhana, netral, dan realistis.\n\nD. IDENTIFIKASI KESIAPAN MURID\nIsi bagian Identifikasi Kesiapan Murid pada template menggunakan kategori:\nBerkembang;\nCakap;\nMahir.\nJangan mengarang kondisi nyata murid.\nKarena data asesmen awal belum dilaksanakan, kategori tersebut harus ditulis sebagai kemungkinan profil kesiapan yang dapat ditemukan berdasarkan asesmen awal, bukan fakta tentang kelas.\nContoh prinsip:\nBerkembang\nMurid masih membutuhkan bantuan untuk kemampuan prasyarat tertentu.\nStrategi dapat berupa:\ncontoh;\npertanyaan penuntun;\nscaffolding;\nsumber yang lebih terstruktur;\npendampingan lebih intensif.\nCakap\nMurid telah memiliki kemampuan prasyarat utama dan dapat melakukan tugas dengan bantuan minimal.\nMahir\nMurid menunjukkan kesiapan lebih tinggi dan dapat memperoleh:\ntantangan lebih kompleks;\ntingkat kemandirian lebih tinggi;\nkesempatan membandingkan alternatif;\nargumentasi lebih mendalam;\npenerapan pada konteks berbeda.\nJangan membuat diferensiasi sekadar:\nmudah – sedang – sulit.\n\nE. TUJUAN PEMBELAJARAN DAN KKTP\nMasukkan seluruh TP dalam Data Kendali ke tabel Tujuan Pembelajaran – KKTP pada template.\nRumusan TP harus dipertahankan apa adanya.\nUntuk setiap TP, rumuskan KKTP secara ringkas berdasarkan kemampuan yang harus terlihat dari murid.\nKKTP harus:\nditurunkan langsung dari TP;\nmenggambarkan bukti kemampuan;\ndapat diamati;\ndapat digunakan untuk menilai ketercapaian;\nselaras dengan Gambaran Asesmen.\nJangan membuat KKTP menjadi daftar indikator kecil.\nJangan menentukan skor, persentase, atau batas nilai jika belum diberikan guru.\nGunakan prinsip:\nTP → kemampuan yang harus muncul → bukti ketercapaian → KKTP\n\nF. DIMENSI PROFIL LULUSAN\nGunakan Dimensi dan Subdimensi yang sudah ditentukan pada Prompt 3.\nPada template:\ntandai/centang Dimensi Profil Lulusan yang digunakan;\ngunakan Subdimensi sebagai acuan dalam merancang aktivitas.\nJika template tidak menyediakan kolom khusus Subdimensi, jangan mengubah struktur template hanya untuk menambahkannya.\nDimensi–Subdimensi harus terlihat dari aktivitas nyata.\nJangan hanya mencantumkan nama dimensi.\n\nG. PRAKTIK PEDAGOGIS, KEMITRAAN, LINGKUNGAN, DAN DIGITAL\nIsi bagian tersebut berdasarkan Data Kendali.\nJangan memperluasnya tanpa kebutuhan.\nPraktik Pedagogis\nGunakan yang sudah ditetapkan dan wujudkan dalam kegiatan pembelajaran.\nKemitraan Pembelajaran\nGunakan hanya jika sudah direncanakan.\nLingkungan Pembelajaran\nBedakan jika relevan:\nlingkungan fisik/virtual;\nbudaya belajar yang perlu dibangun.\nBudaya belajar dapat mencakup:\naman menyampaikan pendapat;\nmenghargai perbedaan;\nmenggunakan alasan/bukti;\nsaling memberi umpan balik;\nbertanggung jawab terhadap proses belajar.\nSesuaikan dengan modul.\nPemanfaatan Digital\nGunakan sesuai Data Kendali.\nJangan menggunakan teknologi hanya sebagai hiasan.\n\nH. MODEL PEMBELAJARAN DAN SINTAKS\nGunakan prinsip:\n1 Modul = 1 Model Pembelajaran Utama = 1 Alur Sintaks Utuh\nModel dapat berupa, jika sesuai:\nProblem Based Learning;\nProject Based Learning;\nInquiry/Discovery;\npembelajaran berbasis teks;\npembelajaran langsung;\npembelajaran kooperatif;\natau model lain yang sesuai karakteristik mata pelajaran.\nTidak semua modul harus menggunakan PBL/PjBL.\nPilih berdasarkan kebutuhan TP.\nJika modul terdiri atas beberapa pertemuan, sintaks model berlangsung melintasi pertemuan.\nContoh:\nPertemuan 1 → Sintaks 1–2\nPertemuan 2 → Sintaks 3–4\nPertemuan 3 → Sintaks 5\nJangan mengulang seluruh sintaks dari awal pada setiap pertemuan.\nJika model yang digunakan memang tidak memiliki sintaks kaku, gunakan tahapan logis model tersebut dan jangan memaksakan sintaks buatan.\n\nI. PEMBELAJARAN MENDALAM\nIntegrasikan secara nyata tiga prinsip:\nBerkesadaran\nMurid:\nmengetahui tujuan belajar;\nmemahami alasan melakukan aktivitas;\nmenghubungkan pengetahuan awal;\nmenyadari strategi belajarnya;\nmemonitor perkembangan;\nmengenali kesulitan;\nmenggunakan umpan balik.\nBermakna\nMurid:\nmenghubungkan konsep dengan konteks;\nmenggunakan pengetahuan;\nmenganalisis masalah/informasi;\nmengambil keputusan;\nmenghasilkan penjelasan, solusi, karya, atau performa sesuai mata pelajaran;\nmemahami manfaat pembelajaran.\nMenggembirakan\nMurid memperoleh:\nrasa aman;\ntantangan yang sesuai;\nkesempatan mengeksplorasi;\nkesempatan berdiskusi;\npilihan atau ruang kreativitas jika relevan;\npengalaman melihat perkembangan belajarnya.\nMenggembirakan tidak harus berupa permainan.\nJangan sekadar menempelkan label Berkesadaran, Bermakna, dan Menggembirakan.\nPrinsip tersebut harus terlihat dari aktivitas.\n\nJ. PENGALAMAN BELAJAR\nGunakan:\nMemahami → Mengaplikasi → Merefleksi\nberdasarkan Gambaran Aktivitas Prompt 3.\nMemahami\nHarus terlihat bagaimana murid:\nmengaktifkan pengetahuan awal;\nmengamati/membaca/menyimak/memirsa;\nmengeksplorasi;\nmengidentifikasi;\nmengolah informasi;\nmembangun konsep atau pemahaman.\nMengaplikasi\nHarus terlihat bagaimana murid menggunakan pemahamannya untuk kemampuan yang dituntut TP, misalnya:\nmenerapkan;\nmenganalisis;\nmenyelesaikan masalah;\nmenginterpretasikan;\nmenulis;\nmempraktikkan;\nmerancang;\nmembuat;\nmempresentasikan;\nmengambil keputusan.\nMerefleksi\nHarus terlihat bagaimana murid:\nmemeriksa proses atau hasil;\nmembandingkan dengan tujuan/kriteria;\nmenggunakan umpan balik;\nmengidentifikasi keberhasilan;\nmengenali bagian yang perlu diperbaiki;\nmemperbaiki hasil jika relevan;\nmenentukan pembelajaran atau penerapan berikutnya.\nTidak harus satu pertemuan hanya memiliki satu pengalaman belajar.\n\nK. PENYUSUNAN SETIAP PERTEMUAN\nSetiap pertemuan harus mengikuti struktur pada template.\nIsi:\nPertemuan ke-: [...]\nPengalaman Belajar: Memahami/Mengaplikasi/Merefleksi atau kombinasi\nModel Pembelajaran: [...]\nSintaks: [...]\nAlokasi Waktu: [...]\nTujuan Pembelajaran yang menjadi fokus: [...]\nKemudian susun:\nPendahuluan\nKegiatan Inti\nPenutup\nTotal waktu harus sesuai jumlah menit yang tersedia.\n\nL. PENDAHULUAN\nPendahuluan harus operasional dan ringkas.\nDapat mencakup:\nmembangun kesiapan;\nmenghubungkan pembelajaran sebelumnya;\nmemanfaatkan hasil asesmen awal;\nmenghadirkan konteks/fenomena/stimulus;\npertanyaan pemantik;\nmenyampaikan TP;\nmembantu murid memahami manfaat pembelajaran.\nGunakan alur:\nGuru memantik → murid merespons → guru menggali/mengklarifikasi → murid memahami arah belajar.\nHindari pendahuluan yang hanya:\nsalam → presensi → menyampaikan materi.\n\nM. KEGIATAN INTI — BAGIAN TERPENTING\nKembangkan Gambaran Aktivitas Prompt 3 menjadi skenario pembelajaran operasional.\nJangan membuat aktivitas baru yang mengubah arah modul.\nGunakan hubungan:\nTP → Aktivitas Murid → Peran Guru → Interaksi → Bukti Belajar → Umpan Balik/Scaffolding → Perbaikan\nUntuk setiap aktivitas penting, harus terlihat:\n1. Aktivitas murid\nJelaskan secara konkret apa yang dilakukan murid terhadap materi/informasi/masalah.\n2. Peran guru\nJelaskan apa yang dilakukan guru untuk:\nmemantik;\nmemfasilitasi;\nmengklarifikasi;\nmemberikan sumber;\nmemberi pertanyaan;\nmengamati;\nmemberikan scaffolding;\nmemberikan umpan balik.\n3. Interaksi\nJika relevan, tampilkan:\npertanyaan pemantik;\npertanyaan penuntun;\nperbedaan jawaban;\nalasan;\npenggunaan bukti;\ndiskusi;\nklarifikasi;\npemeriksaan kembali.\nJangan menulis dialog panjang seperti naskah drama.\n4. Bukti belajar\nJelaskan apa yang muncul dari aktivitas, misalnya:\njawaban;\ncatatan;\nhasil identifikasi;\ntabel;\nanalisis;\npenyelesaian masalah;\ntulisan;\nargumentasi;\npraktik;\nrancangan;\nproduk;\npresentasi;\nrefleksi.\n5. Scaffolding\nJika murid mengalami kesulitan, jelaskan bantuan yang konkret.\nJangan hanya menulis:\nGuru memberikan scaffolding.\nContoh yang lebih tepat:\nGuru memberikan dua pertanyaan penuntun untuk membantu murid membedakan informasi utama dan informasi pendukung.\n6. Umpan balik dan tindak lanjut\nGunakan siklus:\nBukti → Umpan Balik → Perbaikan → Pemeriksaan Kembali\nJangan hanya menulis:\nGuru memberikan umpan balik.\nJelaskan apa yang diperbaiki murid setelah mendapat umpan balik.\n\nN. JANGAN MEMBUAT KEGIATAN TERLALU GENERIK\nHindari langkah seperti:\nGuru menjelaskan materi.\nMurid berdiskusi.\nMurid mengerjakan tugas.\nMurid mempresentasikan hasil.\nJika pola tersebut diperlukan, jelaskan:\nmateri/informasi apa yang diolah;\npertanyaan apa yang dijawab;\napa yang dicari murid;\napa yang dibandingkan;\nalasan apa yang dibangun;\nbukti apa yang dihasilkan;\napa respons guru;\nbagaimana hasil digunakan untuk kegiatan berikutnya.\nGunakan prinsip:\ndetail secara operasional, bukan panjang secara naratif.\n\nO. KETERHUBUNGAN ANTARPERTEMUAN\nSeluruh pertemuan harus membentuk satu perjalanan belajar yang utuh.\nSetiap pertemuan harus:\nmenggunakan hasil pertemuan sebelumnya jika relevan;\nmenghasilkan bekal untuk pertemuan berikutnya;\nmenunjukkan perkembangan kemampuan;\nbergerak menuju ketercapaian TP.\nGunakan transisi alami seperti:\nBerdasarkan hasil analisis pada pertemuan sebelumnya...\nHasil latihan sebelumnya digunakan untuk...\nSetelah memperoleh pemahaman tersebut, murid selanjutnya...\nUmpan balik pada hasil awal digunakan untuk memperbaiki...\nJangan membuat setiap pertemuan terasa sebagai pembelajaran yang terpisah.\n\nP. PENUTUP\nPenutup harus membantu murid menyadari perkembangan belajar.\nDapat mencakup:\nmenyimpulkan pemahaman;\nmenunjukkan bukti belajar;\nmengidentifikasi kesulitan;\nmerefleksi strategi;\nmenggunakan umpan balik;\nmenentukan perbaikan;\nmelihat hubungan dengan pertemuan berikutnya;\nmemberikan apresiasi.\nRefleksi dapat membantu murid menjawab:\nApa yang saya pahami?\nApa yang sudah dapat saya lakukan?\nBukti apa yang menunjukkan perkembangan saya?\nApa yang masih perlu saya perbaiki?\nApa yang akan saya lakukan selanjutnya?\nJangan menjadikan penutup hanya:\nguru menyimpulkan → memberikan tugas → salam.\n\nQ. ASESMEN PEMBELAJARAN\nIsi bagian asesmen pada template berdasarkan Gambaran Asesmen Prompt 4.\nGunakan tiga bagian:\nA. Asesmen Awal Pembelajaran\nCantumkan secara ringkas:\ntujuan;\nwaktu pelaksanaan;\nteknik/bentuk;\nbukti/informasi yang dicari;\nbagaimana hasil digunakan.\nB. Asesmen Formatif\nCantumkan asesmen proses utama sesuai kegiatan.\nUntuk setiap asesmen formatif, jelaskan singkat:\nTP yang dipantau;\nwaktu/titik pelaksanaan;\nteknik;\nbukti belajar;\numpan balik/tindak lanjut.\nC. Asesmen Sumatif/Akhir\nCantumkan:\nTP yang diukur;\nbentuk/teknik;\nbukti ketercapaian utama.\nJangan membuat:\nsoal lengkap;\nkisi-kisi lengkap;\nrubrik lengkap;\ninstrumen asesmen lengkap.\nPerangkat tersebut dikembangkan pada prompt asesmen tersendiri.\n\nR. KESESUAIAN DENGAN ASESMEN\nKegiatan pembelajaran dan asesmen tidak boleh berdiri sendiri.\nPastikan:\nTP → Aktivitas → Bukti Belajar → Asesmen\nBukti yang disebut dalam Gambaran Asesmen harus benar-benar muncul dalam aktivitas pembelajaran.\nJangan menambahkan asesmen yang tidak mungkin menghasilkan bukti dari aktivitas yang dilakukan.\n\nS. ALOKASI WAKTU\nGunakan jumlah pertemuan dan JP persis sesuai Data Kendali.\nHitung:\n1 JP = sesuai ketentuan jenjang pada template/data guru\nKemudian distribusikan waktu secara realistis antara:\npendahuluan;\nkegiatan inti;\npenutup.\nJangan membagi waktu secara mekanis sama rata.\nBerikan waktu terbesar pada aktivitas yang menjadi inti pencapaian TP.\nPastikan total menit setiap pertemuan tepat.\n\nT. KARAKTERISTIK MATA PELAJARAN\nSesuaikan pembelajaran dengan karakteristik mata pelajaran.\nJangan menggunakan pola yang sama untuk semua mapel.\nContoh:\nBahasa → menyimak, membaca/memirsa, berbicara, menulis;\nMatematika → penalaran, representasi, strategi, pemecahan masalah;\nIPA → pengamatan, konsep, data, penyelidikan jika relevan;\nIPS → sumber, fenomena sosial, analisis hubungan dan konteks;\nPendidikan Pancasila → kasus, alasan, nilai, pengambilan keputusan;\nSeni → eksplorasi, proses kreatif, karya/performa jika relevan;\nPJOK → praktik gerak dan performa;\nmata pelajaran lain → sesuaikan tuntutan TP.\nJangan memaksakan:\nprojek;\neksperimen;\nproduk;\npresentasi;\nkerja kelompok;\njika tidak dibutuhkan oleh TP.\n\nU. PRAKTIS UNTUK GURU\nRPP harus membuat guru dapat langsung memahami:\nApa tujuan pertemuan ini?\nApa yang dilakukan murid?\nApa yang dilakukan guru?\nInteraksi penting apa yang harus terjadi?\nApa yang harus diamati guru?\nBukti belajar apa yang seharusnya muncul?\nKesulitan apa yang mungkin muncul?\nScaffolding apa yang dapat diberikan?\nUmpan balik apa yang diperlukan?\nApa yang dilakukan murid setelah menerima umpan balik?\nBagaimana hasil pertemuan ini digunakan pada pertemuan berikutnya?\nJangan membuat RPP seperti buku teks atau dokumen teori.\n\nV. QUALITY CHECK\nSebelum membuat dokumen final, lakukan pemeriksaan internal.\n1. Data Kendali\nPastikan:\nkode modul benar;\nTP tidak berubah;\njumlah pertemuan benar;\nJP benar;\nDimensi Profil Lulusan sesuai;\nGambaran Aktivitas tidak berubah arah;\nGambaran Asesmen tetap menjadi acuan.\n2. Kesesuaian\nPastikan:\nTP → Aktivitas → Bukti Belajar → Asesmen\nterhubung dengan jelas.\n3. Pembelajaran Mendalam\nPastikan prinsip:\nBerkesadaran – Bermakna – Menggembirakan\nterlihat dalam aktivitas nyata.\n4. Pengalaman Belajar\nPastikan:\nMemahami → Mengaplikasi → Merefleksi\nmembentuk perkembangan belajar, bukan sekadar label.\n5. Keterhubungan\nPastikan:\nPertemuan 1 → Pertemuan 2 → ... → Penyelesaian Modul\nmerupakan satu alur.\n6. Keterlibatan Murid\nPastikan murid benar-benar:\nberpikir;\nmelakukan;\nmenghasilkan bukti;\nmemperoleh umpan balik;\nmelakukan perbaikan.\n7. Keterlaksanaan\nPastikan kegiatan realistis dalam:\nwaktu;\nkonteks;\nlingkungan;\nsarana yang diketahui.\n8. Scaffolding dan Umpan Balik\nPastikan tidak hanya tertulis sebagai istilah, tetapi dijelaskan secara operasional.\n9. Asesmen\nPastikan asesmen sesuai Gambaran Asesmen Prompt 4 dan bukti yang benar-benar muncul dalam pembelajaran.\nJika ada ketidaksesuaian, perbaiki sebelum membuat dokumen final tanpa mengubah Data Kendali utama.\n\nW. HASIL AKHIR\nBuat 1 file Microsoft Word .docx menggunakan template yang saya lampirkan.\nTemplate merupakan MASTER LAYOUT.\nPertahankan format dan struktur template.\nIsi seluruh bagian yang relevan sehingga menghasilkan Modul Ajar/RPP yang siap digunakan guru.\nNama file:\nRPP_[Kode Modul]_[Nama Modul].docx\nHasil akhir harus:\nlengkap tetapi tidak bertele-tele;\nrinci secara operasional;\nmudah dibaca;\npraktis digunakan saat mengajar;\nmenunjukkan Pembelajaran Mendalam secara nyata;\nkonsisten dengan seluruh perencanaan sebelumnya.\nJangan tampilkan proses analisis. Langsung hasilkan file Word final.\n",
+  "rules": [
+    {
+      "start": 1680,
+      "end": 1696,
+      "old": "Bahasa Indonesia",
+      "value": "{{mapel}}"
+    },
+    {
+      "start": 1708,
+      "end": 1712,
+      "old": "D/IX",
+      "value": "{{fase}}/{{kelas}}"
+    },
+    {
+      "start": 1724,
+      "end": 1755,
+      "old": "Pemahaman Puisi Rakyat (Pantun)",
+      "value": "{{modul}}"
+    },
+    {
+      "start": 1765,
+      "end": 1789,
+      "old": "Bab II Belajar Berpantun",
+      "value": "{{bab}}"
+    },
+    {
+      "start": 1805,
+      "end": 1877,
+      "old": "Menemukan Ciri-Ciri Pantun\nPenggunaan Pantun dalam Kehidupan Sehari-hari",
+      "value": "{{lingkup}}"
+    },
+    {
+      "start": 1903,
+      "end": 2182,
+      "old": "TP2.1 — Peserta didik mampu menganalisis unsur intrinsik dan ciri-ciri teks puisi rakyat (pantun) yang didengarkan.\n\nTP2.2 — Peserta didik mampu menganalisis makna tersurat dan tersirat serta menginterpretasi ungkapan kepedulian dari teks pantun, syair, dan gurindam yang dibaca.",
+      "value": "{{tp}}"
+    },
+    {
+      "start": 2203,
+      "end": 2208,
+      "old": "20 JP",
+      "value": "{{alokasi}} JP"
+    },
+    {
+      "start": 2226,
+      "end": 2237,
+      "old": "8 Pertemuan",
+      "value": "{{pertemuan}} Pertemuan"
+    },
+    {
+      "start": 2262,
+      "end": 2276,
+      "old": "2 JP atau 3 JP",
+      "value": "{{jpsesi}}"
+    },
+    {
+      "start": 2308,
+      "end": 5227,
+      "old": "3. Dimensi Penalaran Kritis\nNo\nSubdimensi\nBerkembang\nCakap\nMahir\n1\nPenyampaian Argumentasi\nMenyampaikan argumen logis secara runtut disertai alasan sederhana.\nMenyampaikan argumen logis secara runtut disertai alasan yang kuat.\nMenyampaikan argumen yang logis secara runtut, didukung data dan bukti kuat yang relevan, dan mampu menghargai dan menanggapi argumen orang lain.\n2\nPengambilan Keputusan\nMembuat keputusan secara logis dengan membandingkan beberapa pendapat/sudut pandang serta beberapa informasi yang relevan dengan bimbingan.\nMembuat keputusan secara logis dengan membandingkan beberapa pendapat/sudut pandang serta beberapa informasi yang relevan secara mandiri.\nMembuat keputusan secara logis dengan membandingkan beberapa pendapat/sudut pandang serta beberapa informasi yang relevan secara mandiri serta mempertimbangkan dampak yang ditimbulkan.\n3\nPenyelesaian Masalah\nMenyelesaikan masalah sederhana menghasilkan solusi logis dan kontekstual namun kurang tepat.\nMenyelesaikan masalah sederhana dan menghasilkan solusi logis dan kontekstual yang tepat dengan bimbingan.\nMenyelesaikan masalah sederhana dan menghasilkan solusi logis dan kontekstual yang tepat secara mandiri.\n\n8. Dimensi Komunikasi\nNo\nSubdimensi\nBerkembang\nCakap\nMahir\n1\nMenyimak\nMendengarkan secara aktif sejumlah teks lisan yang dipilih untuk mendapatkan informasi eksplisit dan implisit.\nMendengarkan secara aktif sejumlah teks lisan yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan yang relevan.\nMendengarkan secara aktif sejumlah teks lisan yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan relevan dan kritis.\n2\nBerbicara\nMenyampaikan, menggali, dan menanggapi secara lisan berbagai jenis informasi namun belum tepat dan lancar.\nMenyampaikan, menggali, dan menanggapi secara lisan berbagai jenis informasi dengan cara yang cukup tepat, lancar, dan efektif.\nMenyampaikan, menggali, dan menanggapi secara lisan berbagai jenis informasi dengan cara yang benar, tepat, lancar, dan efektif.\n3\nMembaca\nMembaca secara aktif sejumlah teks tertulis yang dipilih untuk mendapatkan informasi eksplisit dan implisit.\nMembaca secara aktif sejumlah teks tertulis yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan yang relevan.\nMembaca secara aktif sejumlah teks tertulis yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan relevan dan kritis.\n4\nMenulis\nMenyampaikan, menggali, dan menanggapi informasi secara tertulis dengan beberapa jenis teks terpilih namun belum tepat dan lancar.\nMenyampaikan, menggali, dan menanggapi informasi secara tertulis dengan beberapa jenis teks terpilih dengan cara yang cukup tepat, lancar, dan efektif.\nMenyampaikan, menggali, dan menanggapi informasi secara tertulis dengan beberapa jenis teks terpilih dengan cara yang benar, tepat, lancar, dan efektif.",
+      "value": "{{dimensions}}"
+    },
+    {
+      "start": 5247,
+      "end": 5300,
+      "old": "Pembelajaran Berbasis Teks, Pembelajaran Kontekstual.",
+      "value": "{{pedagogis}}"
+    },
+    {
+      "start": 5325,
+      "end": 5395,
+      "old": "Tidak memerlukan kemitraan khusus (antarmurid dalam diskusi kelompok).",
+      "value": "{{mitra}}"
+    },
+    {
+      "start": 5421,
+      "end": 5433,
+      "old": "Ruang kelas ",
+      "value": "{{lingkungan}}"
+    },
+    {
+      "start": 5455,
+      "end": 5522,
+      "old": "Pemutar audio untuk memperdengarkan contoh pantun lisan (opsional).",
+      "value": "{{digital}}"
+    },
+    {
+      "start": 5543,
+      "end": 6474,
+      "old": "1. Memahami\nMurid menyimak pembacaan pantun oleh guru atau dari media audio, kemudian mengidentifikasi ciri-ciri fisik (jumlah baris, suku kata, rima) dan unsur intrinsik (sampiran dan isi). Murid berlatih membedakan bentuk pantun dengan puisi rakyat lainnya. Bukti belajar: Catatan identifikasi ciri dan unsur intrinsik pantun.\n2. Mengaplikasi\nMurid membaca teks kumpulan pantun, syair, dan gurindam. Murid secara berkelompok menganalisis dan menginterpretasi makna tersurat dan pesan moral (tersirat) berupa ungkapan kepedulian yang terkandung dalam karya-karya tersebut. Bukti belajar: Tabel perbandingan ciri dan makna (pesan/ungkapan kepedulian) dari pantun, syair, dan gurindam.\n3. Merefleksi\nMurid mengidentifikasi kesulitan dalam menafsirkan kata-kata kiasan kuno khas puisi rakyat. Murid menyimpulkan daya tarik dan relevansi pesan moral (syair, pantun, gurindam) jika diterapkan pada komunikasi anak muda di era saat ini.",
+      "value": "{{aktivitas}}"
+    },
+    {
+      "start": 6493,
+      "end": 7843,
+      "old": "1. Asesmen Awal\nTujuan:\nMengetahui ingatan dan pemahaman prasyarat murid mengenai pola rima dan persajakan dasar.\nBentuk/teknik:\nKuis lisan (melengkapi baris).\nGambaran asesmen:\nGuru membacakan 2 baris sampiran, murid diminta secara acak menebak atau menyahut dengan baris isi yang rimanya sesuai.\nInformasi yang diperoleh dan tindak lanjut:\nMurid yang sudah terbiasa dengan rima a-b-a-b dapat diarahkan untuk langsung mengeksplorasi syair dan gurindam, sementara yang belum akan dibimbing lebih lanjut tentang suku kata dan rima pantun.\n2. Asesmen pada Proses Pembelajaran\nTP yang dipantau: TP2.1\nBukti belajar: Catatan identifikasi ciri dan unsur intrinsik pantun.\nTeknik: Penugasan (lembar kerja analisis).\nInstrumen yang diperlukan: Kunci jawaban / Lembar tugas.\nUmpan balik/tindak lanjut: Memastikan pemahaman konseptual (mana sampiran, mana isi) sudah tuntas sebelum berpindah ke analisis makna yang lebih dalam.\n3. Asesmen Akhir Pembelajaran\nTP yang diukur: TP2.2\nBukti ketercapaian utama:\nTabel perbandingan ciri dan makna (pesan/ungkapan kepedulian) dari pantun, syair, dan gurindam.\nBentuk/teknik asesmen:\nPenugasan tertulis (Tabel Analisis).\nInstrumen yang diperlukan:\nPedoman penskoran kesesuaian interpretasi.\nIndividu/Kelompok:\nKelompok, disertai konfirmasi lisan dari guru secara acak untuk membuktikan pemahaman individu tiap anggota.",
+      "value": "{{asesmen}}"
+    }
+  ],
+  "pasteRule": {
+    "start": 1665,
+    "end": 7843,
+    "old": "Mata Pelajaran\nBahasa Indonesia\nFase/Kelas\nD/IX\nNama Modul\nPemahaman Puisi Rakyat (Pantun)\nNama Bab\nBab II Belajar Berpantun\nLingkup Materi\nMenemukan Ciri-Ciri Pantun\nPenggunaan Pantun dalam Kehidupan Sehari-hari\nTujuan Pembelajaran (TP)\nTP2.1 — Peserta didik mampu menganalisis unsur intrinsik dan ciri-ciri teks puisi rakyat (pantun) yang didengarkan.\n\nTP2.2 — Peserta didik mampu menganalisis makna tersurat dan tersirat serta menginterpretasi ungkapan kepedulian dari teks pantun, syair, dan gurindam yang dibaca.\nAlokasi Waktu Modul\n20 JP\nJumlah Pertemuan\n8 Pertemuan\nJumlah JP per Pertemuan\n2 JP atau 3 JP\nDimensi Profil Lulusan Pilihan\n3. Dimensi Penalaran Kritis\nNo\nSubdimensi\nBerkembang\nCakap\nMahir\n1\nPenyampaian Argumentasi\nMenyampaikan argumen logis secara runtut disertai alasan sederhana.\nMenyampaikan argumen logis secara runtut disertai alasan yang kuat.\nMenyampaikan argumen yang logis secara runtut, didukung data dan bukti kuat yang relevan, dan mampu menghargai dan menanggapi argumen orang lain.\n2\nPengambilan Keputusan\nMembuat keputusan secara logis dengan membandingkan beberapa pendapat/sudut pandang serta beberapa informasi yang relevan dengan bimbingan.\nMembuat keputusan secara logis dengan membandingkan beberapa pendapat/sudut pandang serta beberapa informasi yang relevan secara mandiri.\nMembuat keputusan secara logis dengan membandingkan beberapa pendapat/sudut pandang serta beberapa informasi yang relevan secara mandiri serta mempertimbangkan dampak yang ditimbulkan.\n3\nPenyelesaian Masalah\nMenyelesaikan masalah sederhana menghasilkan solusi logis dan kontekstual namun kurang tepat.\nMenyelesaikan masalah sederhana dan menghasilkan solusi logis dan kontekstual yang tepat dengan bimbingan.\nMenyelesaikan masalah sederhana dan menghasilkan solusi logis dan kontekstual yang tepat secara mandiri.\n\n8. Dimensi Komunikasi\nNo\nSubdimensi\nBerkembang\nCakap\nMahir\n1\nMenyimak\nMendengarkan secara aktif sejumlah teks lisan yang dipilih untuk mendapatkan informasi eksplisit dan implisit.\nMendengarkan secara aktif sejumlah teks lisan yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan yang relevan.\nMendengarkan secara aktif sejumlah teks lisan yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan relevan dan kritis.\n2\nBerbicara\nMenyampaikan, menggali, dan menanggapi secara lisan berbagai jenis informasi namun belum tepat dan lancar.\nMenyampaikan, menggali, dan menanggapi secara lisan berbagai jenis informasi dengan cara yang cukup tepat, lancar, dan efektif.\nMenyampaikan, menggali, dan menanggapi secara lisan berbagai jenis informasi dengan cara yang benar, tepat, lancar, dan efektif.\n3\nMembaca\nMembaca secara aktif sejumlah teks tertulis yang dipilih untuk mendapatkan informasi eksplisit dan implisit.\nMembaca secara aktif sejumlah teks tertulis yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan yang relevan.\nMembaca secara aktif sejumlah teks tertulis yang dipilih untuk mendapatkan informasi eksplisit dan implisit, dan memberikan tanggapan relevan dan kritis.\n4\nMenulis\nMenyampaikan, menggali, dan menanggapi informasi secara tertulis dengan beberapa jenis teks terpilih namun belum tepat dan lancar.\nMenyampaikan, menggali, dan menanggapi informasi secara tertulis dengan beberapa jenis teks terpilih dengan cara yang cukup tepat, lancar, dan efektif.\nMenyampaikan, menggali, dan menanggapi informasi secara tertulis dengan beberapa jenis teks terpilih dengan cara yang benar, tepat, lancar, dan efektif.\n\nPraktik Pedagogis\nPembelajaran Berbasis Teks, Pembelajaran Kontekstual.\n\nKemitraan Pembelajaran\nTidak memerlukan kemitraan khusus (antarmurid dalam diskusi kelompok).\n\nLingkungan Pembelajaran\nRuang kelas \n\nPemanfaatan Digital\nPemutar audio untuk memperdengarkan contoh pantun lisan (opsional).\n\nGambaran Aktivitas\n1. Memahami\nMurid menyimak pembacaan pantun oleh guru atau dari media audio, kemudian mengidentifikasi ciri-ciri fisik (jumlah baris, suku kata, rima) dan unsur intrinsik (sampiran dan isi). Murid berlatih membedakan bentuk pantun dengan puisi rakyat lainnya. Bukti belajar: Catatan identifikasi ciri dan unsur intrinsik pantun.\n2. Mengaplikasi\nMurid membaca teks kumpulan pantun, syair, dan gurindam. Murid secara berkelompok menganalisis dan menginterpretasi makna tersurat dan pesan moral (tersirat) berupa ungkapan kepedulian yang terkandung dalam karya-karya tersebut. Bukti belajar: Tabel perbandingan ciri dan makna (pesan/ungkapan kepedulian) dari pantun, syair, dan gurindam.\n3. Merefleksi\nMurid mengidentifikasi kesulitan dalam menafsirkan kata-kata kiasan kuno khas puisi rakyat. Murid menyimpulkan daya tarik dan relevansi pesan moral (syair, pantun, gurindam) jika diterapkan pada komunikasi anak muda di era saat ini.\n\nGambaran Asesmen\n1. Asesmen Awal\nTujuan:\nMengetahui ingatan dan pemahaman prasyarat murid mengenai pola rima dan persajakan dasar.\nBentuk/teknik:\nKuis lisan (melengkapi baris).\nGambaran asesmen:\nGuru membacakan 2 baris sampiran, murid diminta secara acak menebak atau menyahut dengan baris isi yang rimanya sesuai.\nInformasi yang diperoleh dan tindak lanjut:\nMurid yang sudah terbiasa dengan rima a-b-a-b dapat diarahkan untuk langsung mengeksplorasi syair dan gurindam, sementara yang belum akan dibimbing lebih lanjut tentang suku kata dan rima pantun.\n2. Asesmen pada Proses Pembelajaran\nTP yang dipantau: TP2.1\nBukti belajar: Catatan identifikasi ciri dan unsur intrinsik pantun.\nTeknik: Penugasan (lembar kerja analisis).\nInstrumen yang diperlukan: Kunci jawaban / Lembar tugas.\nUmpan balik/tindak lanjut: Memastikan pemahaman konseptual (mana sampiran, mana isi) sudah tuntas sebelum berpindah ke analisis makna yang lebih dalam.\n3. Asesmen Akhir Pembelajaran\nTP yang diukur: TP2.2\nBukti ketercapaian utama:\nTabel perbandingan ciri dan makna (pesan/ungkapan kepedulian) dari pantun, syair, dan gurindam.\nBentuk/teknik asesmen:\nPenugasan tertulis (Tabel Analisis).\nInstrumen yang diperlukan:\nPedoman penskoran kesesuaian interpretasi.\nIndividu/Kelompok:\nKelompok, disertai konfirmasi lisan dari guru secara acak untuk membuktikan pemahaman individu tiap anggota.",
+    "value": "{{kendali}}"
+  },
+  "order": 8,
+  "version": 1,
+  "category": "perencanaan"
+}
